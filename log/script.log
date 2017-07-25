@@ -1,0 +1,124 @@
+2017-07-25 02:53:34,095 [Thread-9:140242484979456] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /store
+Traceback (most recent call last):
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jinuo/Django/XphoneProject/shop/views.py", line 28, in store
+    return render(request,'store.html',locals())
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'product/{{ good.id }}' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-07-25 03:16:14,136 [Thread-14:140245949462272] [django.request:182] [base:get_response] [WARNING]- Not Found: /OnePlus5/templates/star-phone.html
+2017-07-25 03:16:17,025 [Thread-15:140245949462272] [django.request:182] [base:get_response] [WARNING]- Not Found: /shop/templates/store.html
+2017-07-25 03:17:03,009 [Thread-22:140245966247680] [django.request:182] [base:get_response] [WARNING]- Not Found: /shop/templates/store.html
+2017-07-25 03:17:37,634 [Thread-29:140245941069568] [django.request:182] [base:get_response] [WARNING]- Not Found: /shop/templates/store.html
+2017-07-25 03:17:40,047 [Thread-30:140245941069568] [django.request:182] [base:get_response] [WARNING]- Not Found: /shop/templates/store.html
+2017-07-25 03:17:40,672 [Thread-31:140245983033088] [django.request:182] [base:get_response] [WARNING]- Not Found: /shop/templates/store.html
+2017-07-25 03:22:57,884 [Thread-58:140246059783936] [django.request:182] [base:get_response] [WARNING]- Not Found: /商城
+2017-07-25 03:23:03,164 [Thread-59:140245966247680] [django.request:182] [base:get_response] [WARNING]- Not Found: /博客
+2017-07-25 03:32:15,267 [Thread-66:140043180046080] [django.request:182] [base:get_response] [WARNING]- Not Found: /OnePlus5
+2017-07-25 03:32:19,639 [Thread-69:140043163260672] [django.request:182] [base:get_response] [WARNING]- Not Found: /server
+2017-07-25 03:32:23,975 [Thread-71:140043546007296] [django.request:182] [base:get_response] [WARNING]- Not Found: /blog
+2017-07-25 03:32:30,608 [Thread-73:140043163260672] [django.request:182] [base:get_response] [WARNING]- Not Found: /luntan
+2017-07-25 03:32:46,727 [Thread-84:140043546007296] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /blog_video/
+Traceback (most recent call last):
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jinuo/Django/XphoneProject/blog/views.py", line 16, in blog_video
+    return render(request,'blog_video.html',locals())
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'server' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-07-25 03:33:33,961 [Thread-85:140043546007296] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /blog_video/
+Traceback (most recent call last):
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jinuo/Django/XphoneProject/blog/views.py", line 16, in blog_video
+    return render(request,'blog_video.html',locals())
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/jinuo/myvenv/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'blog' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-07-25 04:12:23,328 [Thread-128:140043546007296] [django.request:182] [base:get_response] [WARNING]- Not Found: /OnePlus5

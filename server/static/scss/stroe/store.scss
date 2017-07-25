@@ -1,0 +1,251 @@
+@mixin textof{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.clearfix:after{
+  clear: both;
+}
+.wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.second-header-nav{
+  width: 100%;
+  height: 150px;
+  background-color: #f1f1f1;
+  position: relative;
+  z-index: 20;
+}
+.subnav-container{
+  width: 654px;
+  margin: 0 auto;
+  padding: 41px 0 10px;
+  li{
+    display: inline-block;
+    font-size: 14px;
+    width: 105px;
+    text-align: center;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    &:hover{
+      a{
+        color:#ed1936;
+      }
+      i:before{
+        z-index: 10;
+      }
+    }
+  }
+  a{
+    display: block;
+    position: relative;
+    color: #333;
+  }
+  i{
+    display:block;
+    margin: 0 auto 25px;
+    background-repeat: no-repeat;
+    height: 41px;
+    width: 41px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+  }
+  i:before,i:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: opacity .3s;
+    background-color: #ccc;
+    background-image: url("../../images/store/store-sprite.png");
+  }
+  .i-phone:before{
+    background-position: 0 -410px;
+  }
+  .i-phone:after{
+    background-position: 0 -451px;
+  }
+  .i-headset:before{
+    background-position: 0 0px;
+  }
+  .i-headset:after{
+    background-position: 0 -41px;
+  }
+  .i-shell:before{
+    background-position: 0 -82px;
+  }
+  .i-shell:after{
+    background-position: 0 -123px;
+  }
+  .i-usb:before{
+    background-position: 0 -164px;
+  }
+  .i-usb:after{
+    background-position: 0 -205px;
+  }
+  .i-suit:before{
+    background-position: 0 -246px;
+  }
+  .i-suit:after{
+    background-position: 0 -287px;
+  }
+  .i-label:before{
+    background-position: 0 -328px;
+  }
+  .i-label:after{
+    background-position: 0 -369px;
+  }
+  .scale0{
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0) ;
+  }
+}
+.banner{
+  a{
+    display: table;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background: url("../../images/store/OnePlus5Shopbanner0704-large.jpg")  center top no-repeat;
+    background-size: cover;
+  }
+}
+.hero-goods-wrap{
+  width: 100%;
+ height: 237px;
+  margin: 60px 0;
+  li{
+    float: left;
+    width:31.55738%;
+    margin-right: 1.66667%;
+    background-color: #f2f2f2;
+    img{
+      width: 100%;
+    }
+  }
+}
+.goods-content{
+  width: 100%;
+  background: #f2f2f2;
+  padding-bottom: 3.64583%;
+  h2{
+    font-size: 24px;
+    width: 100%;
+    color:#333;
+    height: 30px;
+    line-height: 30px;
+    margin: 50px 0 10px 0;
+    @include textof;
+  }
+  h3{
+    line-height: 1.8;
+    margin: 20px 20px 8px;
+    @include textof;
+  }
+  .goods-list{
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li{
+      font-size: 16px;
+      color: #333;
+      width: 23.75%;
+      max-width: 285px;
+      background: #fff;
+      text-align: center;
+      padding: 50px 0;
+      margin-top: 20px;
+      position: relative;
+      -moz-transition: all .3s;
+      -o-transition: all .3s;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      &:hover{
+        -webkit-box-shadow: 0 20px 30px rgba(0,0,0,.1);
+        -moz-box-shadow: 0 20px 30px rgba(0,0,0,.1);
+        box-shadow: 0 20px 30px rgba(0,0,0,.1);
+      }
+    }
+    a{
+      display: block;
+      &:hover{
+        color:#333;
+      }
+    }
+    img{
+      width: 64.21053%;
+      max-width: 183px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.hot-sell{
+ padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and(max-width: 1140px) {
+  .banner {
+    a{
+      height: 400px;
+    }
+  }
+}
+@media screen and(max-width: 880px) {
+  .banner {
+    a{
+      height: 310px;
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .hero-goods-wrap{
+    li{
+      width: 100%;
+    }
+  }
+  .goods-content{
+    .goods-list{
+      padding: 20px;
+      li{
+        width: 48.33333%;
+      }
+    }
+  }
+
+}
+@media screen and(max-width:620px) {
+  .banner {
+    a{
+      height: 560px;
+      background: url("../../images/store/OnePlus5Shopbanner0704-small.jpg")  center top no-repeat;
+    }
+  }
+}
+

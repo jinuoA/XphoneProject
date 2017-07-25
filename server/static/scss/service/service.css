@@ -1,0 +1,446 @@
+.wrap {
+  width: 100%;
+  overflow: hidden; }
+  .wrap .service-content {
+    width: 100%;
+    height: 100%; }
+
+.service-img {
+  background: url("../../images/service/banner_large.jpg") center no-repeat;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  display: table; }
+  .service-img div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: 100%; }
+    .service-img div h2 {
+      font-size: 50px;
+      color: #ffffff;
+      display: inline;
+      font-weight: 200; }
+
+.service-nav {
+  background: #ffffff;
+  overflow: hidden; }
+
+.service-nav-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+  overflow: hidden; }
+  .service-nav-content .ser-nav-list {
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 60px auto; }
+    .service-nav-content .ser-nav-list li {
+      width: 25%;
+      float: left;
+      text-align: center; }
+
+.ser-nav-list li a {
+  display: inline-block;
+  color: #10181f; }
+
+.ser-nav-list li span {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 24px;
+  background-repeat: no-repeat; }
+.ser-nav-list li p {
+  display: inline-block; }
+
+.list-li1 a span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -292px; }
+.list-li1 a:hover span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -352px; }
+
+.list-li2 a span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -52px; }
+.list-li2 a:hover span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -112px; }
+
+.list-li3 a span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -172px; }
+.list-li3 a:hover span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -232px; }
+
+.list-li4 a span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -518px; }
+.list-li4 a:hover span {
+  background-image: url("../../images/service/serviceicons.png");
+  background-position: 0 -578px; }
+
+.ser-nav-img li {
+  width: 50%;
+  padding: 0 10px;
+  float: left; }
+  .ser-nav-img li div {
+    overflow: hidden;
+    position: relative; }
+    .ser-nav-img li div:hover i {
+      transform: scale(1.05); }
+
+.ser-nav-img li i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: transform 1s; }
+.ser-nav-img li a {
+  position: relative;
+  display: block;
+  height: 260px;
+  color: #ffffff; }
+.ser-nav-img li .img-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.img-li1 i {
+  background: url("../../images/service/img-jdb.jpg") center no-repeat; }
+.img-li1 h3 {
+  width: 82px;
+  height: 80px;
+  display: block;
+  background-position: 0 -412px;
+  background-image: url("../../images/service/serviceicons.png");
+  margin-bottom: 24px; }
+.img-li1 p {
+  display: block; }
+
+.img-li2 i {
+  background: url("../../images/service/img-yjys.jpg") center no-repeat; }
+.img-li2 h3 {
+  width: 82px;
+  height: 80px;
+  display: block;
+  background-position: 0 -1118px;
+  background-image: url("../../images/service/serviceicons.png");
+  margin-bottom: 24px; }
+
+.ser-nav-div {
+  display: none; }
+
+.service-customer {
+  height: 650px;
+  margin-bottom: 60px;
+  background: url("../../images/service/nserv-point.jpg") center no-repeat;
+  background-size: cover; }
+  .service-customer .ser-cus-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px; }
+
+.ser-cus-content h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  color: #333;
+  text-align: center;
+  position: relative; }
+.ser-cus-content h2:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 0;
+  border-bottom: 1px solid #000;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -20px; }
+.ser-cus-content h3 {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 24px; }
+.ser-cus-content .ser-cus-btn {
+  text-align: center;
+  margin-bottom: 45px; }
+
+.ser-cus-btn .search-button {
+  text-align: center;
+  width: 150px;
+  height: 45px;
+  border: 1px solid #000;
+  font-size: 14px;
+  border-radius: 1px; }
+  .ser-cus-btn .search-button img {
+    width: 22px;
+    padding-right: 10px;
+    vertical-align: middle; }
+
+.ser-cus-div .ser-cus-left {
+  border-right: 1px solid #dfdfdf;
+  background: #fff;
+  width: 50%;
+  height: 330px;
+  float: left;
+  text-align: center;
+  padding-top: 40px; }
+  .ser-cus-div .ser-cus-left h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    text-align: center; }
+  .ser-cus-div .ser-cus-left p {
+    font-size: 14px;
+    line-height: 24px;
+    height: 90px;
+    color: #999;
+    width: 85%;
+    max-width: 440px;
+    margin: 0 auto; }
+  .ser-cus-div .ser-cus-left img {
+    width: 56px;
+    display: block;
+    margin: 0 auto 25px; }
+  .ser-cus-div .ser-cus-left a {
+    font-size: 14px;
+    color: #09c;
+    display: inline-block;
+    position: relative; }
+  .ser-cus-div .ser-cus-left a:before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-left-color: #0099cc;
+    display: inline-block;
+    margin-right: 10px; }
+.ser-cus-div .ser-cus-right {
+  border-right: 1px solid #dfdfdf;
+  background: #fff;
+  width: 50%;
+  height: 330px;
+  float: left;
+  text-align: center;
+  padding-top: 40px;
+  border-right: none; }
+  .ser-cus-div .ser-cus-right h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    text-align: center; }
+  .ser-cus-div .ser-cus-right p {
+    font-size: 14px;
+    line-height: 24px;
+    height: 90px;
+    color: #999;
+    width: 85%;
+    max-width: 440px;
+    margin: 0 auto; }
+  .ser-cus-div .ser-cus-right img {
+    width: 56px;
+    display: block;
+    margin: 0 auto 25px; }
+  .ser-cus-div .ser-cus-right a {
+    font-size: 14px;
+    color: #09c;
+    display: inline-block;
+    position: relative; }
+  .ser-cus-div .ser-cus-right a:before {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-left-color: #0099cc;
+    display: inline-block;
+    margin-right: 10px; }
+
+.ser-cus-div2 {
+  display: none; }
+
+.service-question {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding-bottom: 60px; }
+  .service-question header {
+    height: 90px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 14px; }
+    .service-question header h2 {
+      font-size: 24px;
+      color: #222;
+      font-weight: 400;
+      float: left;
+      line-height: 90px;
+      margin-left: 3%; }
+    .service-question header form {
+      float: right;
+      margin-right: 3%;
+      margin-top: 20px;
+      background: #efefef; }
+  .service-question ul {
+    width: 100%;
+    margin-bottom: 30px; }
+
+.service-question .ser-ques-text {
+  height: 50px;
+  width: 350px;
+  border: none;
+  background: #efefef;
+  float: left;
+  line-height: 48px;
+  text-indent: 18px; }
+.service-question .ser-ques-submit {
+  height: 50px;
+  width: 50px;
+  border: none;
+  float: left;
+  background: url("../../images/service/icon_search_large.png") center no-repeat;
+  text-indent: -300px;
+  cursor: pointer; }
+
+.service-question ul li {
+  height: 50px;
+  width: 50%;
+  float: left;
+  padding: 0 3%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  overflow: hidden; }
+
+.service-question li a {
+  position: relative;
+  padding-left: 10px;
+  color: #666; }
+.service-question li a:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -2px;
+  width: 0;
+  border: 5px solid transparent;
+  border-left-color: #ffffff;
+  z-index: 2;
+  overflow: hidden; }
+.service-question li a:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-left-color: #666;
+  z-index: 1;
+  overflow: hidden; }
+.service-question li:hover {
+  text-decoration: underline; }
+.service-question a {
+  font-size: 14px;
+  color: #09c;
+  display: inline-block;
+  position: relative; }
+.service-question a:before {
+  content: '';
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-left-color: #0099cc;
+  display: inline-block;
+  margin-right: 10px; }
+.service-question .ser-ques-all {
+  margin: 0 3%; }
+
+.service-contact {
+  height: 420px;
+  padding-top: 110px;
+  background: url("../../images/service/contactusbg.jpg") center no-repeat;
+  background-size: cover;
+  color: #fff; }
+  .service-contact h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    color: #333;
+    text-align: center;
+    position: relative;
+    color: #fff; }
+  .service-contact h2:before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 0;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -20px;
+    border-bottom: 1px solid #fff; }
+
+.service-contact ul {
+  width: 100%;
+  text-align: center;
+  overflow: hidden; }
+  .service-contact ul li {
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color: #fff; }
+
+.service-contact li a {
+  display: inline-block;
+  color: #fff; }
+.service-contact li span {
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto 28px; }
+
+.wx a span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -998px; }
+.wx:hover span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -1058px; }
+
+.qq a span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -638px; }
+.qq:hover span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -698px; }
+
+.wb a span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -758px; }
+.wb:hover span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -818px; }
+
+.tel a span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -878px; }
+.tel:hover span {
+  background: url("../../images/service/serviceicons.png");
+  background-position: 0 -938px; }
+
+/*# sourceMappingURL=service.css.map */
