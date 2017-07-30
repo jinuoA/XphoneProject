@@ -9,7 +9,7 @@ from django.db import models
 #博客
 
 class BlogAd(models.Model):
-    img_url = models.ImageField(upload_to='uploads/')
+    img_url = models.ImageField(upload_to='blog/ad/%Y/%m')
 
 
     class Meta():
@@ -49,6 +49,7 @@ class ArticleManager(models.Manager):
 class Article(models.Model):
     title = models.CharField(max_length=50, verbose_name='文章标题')
     desc = models.CharField(max_length=50, verbose_name='文章描述')
+    img = models.ImageField(upload_to='blog/article/%Y/%m',blank=True)
     content = models.TextField(verbose_name='文章内容')
     click_count = models.IntegerField(default=0, verbose_name='点击次数')
     is_recommend = models.BooleanField(default=False, verbose_name='是否推荐')
@@ -95,8 +96,10 @@ class Comment(models.Model):
 
 class Video(models.Model):
     name = models.CharField(max_length=30)
+    img_url = models.ImageField(upload_to='blog/video/%Y/%m',blank=True)
     video_url = models.CharField(u'视频资源URL',max_length=200)
     video_length = models.IntegerField(u'视频长度')
+    # ass = models.URLField()
 
     class Meta():
         verbose_name = '视频'
@@ -111,7 +114,8 @@ class Video(models.Model):
 class ProPic(models.Model):
     title = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
-    img_url = models.ImageField(upload_to='uploads/')
+    img_url = models.ImageField(upload_to='blog/ProPic/%Y/%m')
+    index = models.IntegerField(u'显示顺序', default=999)
 
     class Meta():
         verbose_name = "产品图片"

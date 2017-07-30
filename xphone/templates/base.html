@@ -1,17 +1,33 @@
-
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>super + 首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    {% for nav in nav_list %}
+        <title>{{ nav }}</title>
+    {% endfor %}
+    <!--animate-->
+    <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'scss/common/reset.css' %}">
     <link rel="stylesheet" href="{% static 'scss/common/iconfont.css' %}">
     <link rel="stylesheet" href="{% static 'scss/common/common.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/common/login.css' %}">
     <link rel="stylesheet" href="{% static 'scss/index/index.css' %}">
     <link rel="stylesheet" href="{% static 'scss/stroe/store.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/service/service.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/service/media.css' %}">
+    <!--blog-->
+    <link rel="stylesheet" href="{% static 'scss/blog/blog.css' %}" >
+    <link rel="stylesheet" href="{% static 'scss/blog/blog-v.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/blog/blog-picture.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/blog/blog-home&news.css' %}">
+    <link href="{% static 'scss/star-phone/star-phone.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'scss/product-details/products-dails.css' %}">
+
+
 </head>
 <body>
 <!--头部导航栏 开始-->
@@ -19,25 +35,13 @@
         <div class="header-wrap">
         <!--左边 开始-->
         <div class="header-left">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
                 <img class="img-responsive" src="{% static 'images/common/logo.png' %}" alt="">
             </a>
         </div>
         <!--左边 结束-->
         <!--中间 开始-->
-        <div class="header-mid">
-            <ul>
-                {% for nav in nav_list %}
-                <li>
-                    <a href="{{ nav.english }}">
-                        {{ nav }}
-                        <i></i>
-                    </a>
-                </li>
-               {% endfor %}
-
-            </ul>
-        </div>
+        {% include 'include/nav_bar.html' %}
         <!--中间 结束-->
         <!--右边 开始-->
         <div class="header-right">
@@ -47,9 +51,18 @@
             <div class="shop-car">
                 <span></span>
             </div>
-            <div class="user">
-                <span></span>
+            {% if request.user.is_authenticated %}
+            <div class="user" style="">
+                <a href="/logout"><span></span></a>
             </div>
+            {% else %}
+            <div class="user">
+                <a href="/login"><span></span></a>
+            </div>
+            {% endif %}
+
+
+
         </div>
         <!--右边 结束-->
         <!--点击搜索按钮 开始-->
@@ -65,7 +78,7 @@
                 </div>
                 <div class="bottom">
                     <ul>
-                        <li><a href="star-phone.htmml">oneplus5</a></li>
+                        <li><a href="{% url 'OnePlus5' %}">oneplus5</a></li>
                         <li><a href="#">super快闪充电器</a></li>
                         <li><a href="#">oneplus 5保护壳</a></li>
                         <li><a href="#">电子发票</a></li>
@@ -115,22 +128,21 @@
             <div class="left">
                 <ul>
                     <li>super产品</li>
-                    <li><a href="#">OnePlus 5</a></li>
-                    <li><a href="#">一加手机 3T</a></li>
-                    <li><a href="#">一加手机 3</a></li>
+                    {% for pt in product_list %}
+                    <li><a href="#">{{ pt.proName }}</a></li>
+                    {% endfor %}
                 </ul>
                 <ul>
                     <li>关于super</li>
-                    <li><a href="#">了解super</a></li>
-                    <li><a href="#">加入super</a></li>
-                    <li><a href="#">H2OS</a></li>
+                    {% for ab in about_list %}
+                    <li><a href="#">{{ ab.name }}</a></li>
+                    {% endfor %}
                 </ul>
                 <ul>
                     <li>服务支持</li>
-                    <li><a href="#">自助服务</a></li>
-                    <li><a href="#">技术支持</a></li>
-                    <li><a href="#">售后服务</a></li>
-                    <li><a href="#">一加加多宝</a></li>
+                    {% for sv in service_list %}
+                    <li><a href="#">{{ sv.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="right">
@@ -157,29 +169,15 @@
     <div class="list-msg">
         <ul class="top">
             <li>
+                {% for ab in about_list %}
                 <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
                 <div class="less528-footer-content">
-                    <p><a href="#">oneplus5</a></p>
-                    <p><a href="#">superphone 3T</a></p>
-                    <p><a href="#">superphone3</a></p>
+
+                    <p><a href="#">{{ ab.name }}</a></p>
+
                 </div>
             </li>
-            <li>
-                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
-                <div class="less528-footer-content">
-                    <p><a href="#">oneplus5</a></p>
-                    <p><a href="#">superphone 3T</a></p>
-                    <p><a href="#">superphone3</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
-                <div class="less528-footer-content">
-                    <p><a href="#">oneplus5</a></p>
-                    <p><a href="#">superphone 3T</a></p>
-                    <p><a href="#">superphone3</a></p>
-                </div>
-            </li>
+            {% endfor %}
         </ul>
         <div class="bottom">
             <div class="box">

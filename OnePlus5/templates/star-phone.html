@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Star-Phone | 双摄更高清</title>
+    <!--animate-->
+    <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <!--normalize-->
+    <link rel="stylesheet" href="../scss/common/reset.css">
+    <!--common-->
+    <link href="../scss/common/common.css" rel="stylesheet">
+    <!--star phone-->
+    <link href="../scss/star-phone/star-phone.css" rel="stylesheet">
+</head>
+<body>
+<!--头部导航栏 开始-->
+<header>
+    <div class="header-wrap">
+        <!--左边 开始-->
+        <div class="header-left">
+            <a href="index.html">
+                <img class="img-responsive" src="../images/common/logo.png" alt="">
+            </a>
+        </div>
+        <!--左边 结束-->
+        <!--中间 开始-->
+        <div class="header-mid">
+            <ul>
+                <li>
+                    <a href="star-phone.html">
+                        oneplus5
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../shop/templates/store.html">
+                        商城
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="service.html">
+                        服务
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="bolo.html">
+                        博客
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        论坛
+                        <i></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--中间 结束-->
+        <!--右边 开始-->
+        <div class="header-right">
+            <div class="search" id="index-search">
+                <span></span>
+            </div>
+            <div class="shop-car">
+                <span></span>
+            </div>
+            <div class="user">
+                <span></span>
+                <span class="j-loginin"></span>
+                <ul class="logout">
+                    <li>我的订单</li>
+                    <li>super账户</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+        <!--右边 结束-->
+        <!--点击搜索按钮 开始-->
+        <div class="search-hidden">
+            <div class="top">
+                <div class="hidden-input">
+                    <form action="">
+                        <input type="button" placeholder="">
+                        <input type="text">
+                    </form>
+                </div>
+                <div class="delete-btn"></div>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><a href="star-phone.htmml">oneplus5</a></li>
+                    <li><a href="#">super快闪充电器</a></li>
+                    <li><a href="#">oneplus 5保护壳</a></li>
+                    <li><a href="#">电子发票</a></li>
+                    <li><a href="#">纳税人识别号</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--点击搜索按钮 结束-->
+        <!--屏幕小于768 开始-->
+        <div class="less768">
+            <div class="shop-car"><span></span></div>
+            <div class="user">
+                <span></span>
+                <span class="j-loginin"></span>
+                <ul class="logout">
+                    <li>我的订单</li>
+                    <li>super账户</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+            <div class="fold" id="header-fold"><span ></span></div>
+        </div>
+        <!--屏幕小于768 结束-->
+    </div>
+</header>
+<!--头部导航栏 结束-->
+<!--小屏幕下隐藏的部分 开始-->
+<div class="less768-menu dn">
+    <ul id="less768-ul">
+        <li><a href="star-phone.html">oneplus5</a></li>
+        <li><a href="../../shop/templates/store.html">商城</a></li>
+        <li><a href="service.html">服务</a></li>
+        <li><a href="bolo.html">博客</a></li>
+        <li><a href="#">论坛</a></li>
+    </ul>
+    <div class="arrow-down" id="less768-header-arrow-down">
+        <i class="superfont icon-packup"></i>
+    </div>
+    <div class="less768-menu-form">
+        <form action="">
+            <input type="text" placeholder="搜索您的商品名称" id="less768-input-txt">
+            <input type="submit" value="&nbsp;">
+        </form>
+    </div>
+</div>
+<!--小屏幕下隐藏的部分 结束-->
+<div class="sp-main">
+    <!--section nav-->
+    <section class="sp-nav">
+        <div class="big-screen">
+            <div class="header-subnav">
+                <div class="subnav-menu">
+                    <div class="brand">
+                        <a href="#"></a>
+                    </div>
+                    <ul>
+                        <li><a href="#">
+                            高清双摄
+                        </a></li>
+                        <li><a href="#">
+                            设计
+                        </a></li>
+                        <li><a href="#">
+                            Dash闪冲
+                        </a></li>
+                        <li><a href="#">
+                            体验
+                        </a></li>
+                        <li><a href="#">
+                            屏幕
+                        </a></li>
+                        <li><a href="#">
+                            网络
+                        </a></li>
+                        <li><a href="#">
+                            参数
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="btn"><a href="#">立即购买</a></div>
+            </div>
+        </div>
+        <div class="small-scren">
+            <div class="top">
+                <div class="left" id="one-small-btn">
+                    <a href="#"></a>
+                    <span class="rotate"></span>
+                </div>
+                <div class="right">
+                    <div class="btn">
+                        <a href="#">立即购买</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="bottom dn" id="small-hidden-menu">
+                <li><a href="#">
+                    高清双摄
+                </a></li>
+                <li><a href="#">
+                    设计
+                </a></li>
+                <li><a href="#">
+                    Dash闪冲
+                </a></li>
+                <li><a href="#">
+                    体验
+                </a></li>
+                <li><a href="#">
+                    屏幕
+                </a></li>
+                <li><a href="#">
+                    网络
+                </a></li>
+                <li><a href="#">
+                    参数
+                </a></li>
+            </ul>
+        </div>
+    </section>
+    <!--section hero-->
+    <section class="sp-hero">
+        <div class="sp-hero-desc">
+            <h2 class="animated fadeInUp">Star-Phone</h2>
+            <p class="animated fadeInUp">高清双摄 尽显魅力</p>
+            <p class="animated fadeInUp">￥ 2999
+                <small>起</small>
+            </p>
+        </div>
+        <div class="sp-hero-bg animated fadeInUp"></div>
+    </section>
+    <!--section video-->
+    <section class="sp-video">
+        <a class="sp-video-btn" href=""></a>
+    </section>
+    <!--section camera-->
+    <section class="sp-camera">
+        <!--camera hd-->
+        <div class="camera-hd">
+            <div class="sp-container">
+                <h2>高清双摄</h2>
+                <div class="camera-hd-content">
+                    <ul>
+                        <li class="active">
+                            <h3>人像模式</h3>
+                            <p>人像识别更为精准，背景虚化更有意境。利用景深效果突出你的脸庞，让照片中的你，就是瞩目的焦点。</p>
+                        </li>
+                        <li>
+                            <h3>2 倍无损变焦</h3>
+                            <p>拍摄远景时，2 倍无损变焦可以帮你拉近一半距离，拍到的照片就像近看一样清晰。遥不可及的美景细节，触手可及。</p>
+                        </li>
+                        <li>
+                            <h3>专业模式</h3>
+                            <p>你可以实时感知、调节曝光、白平衡等。还支持 RAW 图像文件，便于你后期编辑，助你一展摄影才华。</p>
+                        </li>
+                    </ul>
+                    <ol class="sp-slide-bar">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="camera-hd-picbox">
+                <ul>
+                    <li class="pic-portrait active"></li>
+                    <li class="pic-smart"></li>
+                    <li class="pic-pro"></li>
+                </ul>
+            </div>
+        </div>
+        <!--camera lens-->
+        <div class="camera-lens">
+            <div class="camera-lens-bg"></div>
+            <div class="camera-lens-content">
+                <div class="sp-container">
+                    <div class="camera-lens-inner">
+                        <div class="camera-lens-cell animated fadeInRight active">
+                            <img src="" alt="">
+                            <h3>高清双摄</h3>
+                            <p>后置 2000 万 + 1600 万高清摄像头，清晰得经得起放大查看，经得起时间考验，更经得起挑剔目光。</p>
+                        </div>
+                        <div class="camera-lens-cell animated fadeInRight">
+                            <img src="" alt="">
+                            <h3>双核对焦</h3>
+                            <p>比 PDAF 相位对焦快 40% 的对焦速度，指哪儿对哪儿。让你没有对焦慢的等待，只有好照片的期待。</p>
+                        </div>
+                        <div class="camera-lens-cell animated fadeInRight">
+                            <img src="" alt="">
+                            <h3>f /1.7 大光圈</h3>
+                            <p>进光量比 OnePlus 3T 增加 34%。白天拍出的照片，更加清晰。夜晚的精彩，亦不因夜色而落幕。</p>
+                        </div>
+                        <ol class="sp-slide-bar">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--camera shot-->
+        <div class="camera-shot">
+            <div class="camera-wrap">
+                <h2>Shot on Star-Phone</h2>
+                <div class="camera-container">
+                    <ul>
+                        <li><img src="../images/star-phone/example1.jpg" alt=""></li>
+                        <li class="s"><img src="../images/star-phone/example2.jpg" alt=""></li>
+                        <li><img src="../images/star-phone/example3.jpg" alt=""></li>
+                        <li class="s"><img src="../images/star-phone/example4.jpg" alt=""></li>
+                        <li class="s"><img src="../images/star-phone/example5.jpg" alt=""></li>
+                        <li><img src="../images/star-phone/example6.jpg" alt=""></li>
+                        <li><img src="../images/star-phone/example7.jpg" alt=""></li>
+                        <li class="s"><img src="../images/star-phone/example8.jpg" alt=""></li>
+                        <li><img src="../images/star-phone/example9.jpg" alt=""></li>
+                        <li><img src="../images/star-phone/example10.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="camera-btn btn-prev"></div>
+                <div class="camera-btn btn-next"></div>
+                <ol class="sp-slide-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <p class="tip">无论在白天还是夜晚，OnePlus 5 的相机表现都更进一步。让你按下快门，就是一张好照片。
+                    <br>以上样张均由 OnePlus 5 拍摄。</p>
+            </div>
+        </div>
+    </section>
+    <!--sp design-->
+    <section class="sp-design">
+        <div class="sp-container">
+            <div class="sp-design-title">
+                <h2>设计</h2>
+                <p>金属一体纤薄机身，集硬朗和优雅于一身。触动人心的好手感，只有亲自上手才懂得。</p>
+            </div>
+            <div class="sp-design-content">
+                <ul class="sp-design-desc">
+                    <li class="animated fadeIn active"><h3>纤薄金属机身</h3>
+                        <p>
+                            7.25 mm 视觉减薄侧边机身，第 5 代大猩猩 2.5D 玻璃覆 盖。采用全新油墨，更加一体深邃。看起来硬朗、优雅； 摸上去温润、舒适。
+                        </p></li>
+                    <li class="animated fadeIn">
+                        <h3>优雅弧度，为手感舒适而设计</h3>
+                        <p>上百次背部弧度打磨，不计成本的调试、再调试，让你看到它，就想拿起它；一上手，就爱不释手。</p>
+                    </li>
+                    <li class="animated fadeIn">
+                        <h3>双曲天线，美感与手感兼得</h3>
+                        <p>双曲天线上下环绕，两端自然过渡，与机身和谐一致的的同时，让我们看到，美感，可以与手感兼得。</p>
+                        <p class="tip">备注：摄像头顶部中央处的竖状微缝为 NFC 天线，这一巧妙的设计，在兼顾 NFC 功能的同时，也保持了 OnePlus 5 整机一体的美感。</p>
+                    </li>
+                    <li class="animated fadeIn">
+                        <h3>三段式开关，让手机更清静</h3>
+                        <p>拨动即可调节静音、勿扰、响铃模式，一键帮你隔绝烦人的信息推送。你也可以自行设置，不错过每个重要通知。</p>
+                        <div class="silent-desc">
+                            <div class="silent-model active">
+                                <div class="model-icon icon-vibrate"></div>
+                                静音
+                            </div>
+                            <div class="silent-model">
+                                <div class="model-icon icon-priority"></div>
+                                勿扰
+                            </div>
+                            <div class="silent-model">
+                                <div class="model-icon icon-all"></div>
+                                响铃
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ol class="sp-slide-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+        <div class="sp-design-wrap">
+            <div class="sp-design-item phone1 animated fadeInRight active"></div>
+            <div class="sp-design-item animated fadeInRight phone3"></div>
+            <div class="sp-design-item phone4 animated fadeInRight"></div>
+            <div class="sp-design-item silent-item phone2-silent animated fadeInRight"></div>
+            <div class="sp-design-item silent-item phone2-priority"></div>
+            <div class="sp-design-item silent-item phone2-all"></div>
+        </div>
+        <div class="sp-design-wrap-m">
+            <div class="sp-design-container-m">
+                <div class="sp-design-item-m phone1-m "></div>
+                <div class="sp-design-item-m phone3-m "></div>
+                <div class="sp-design-item-m phone4-m "></div>
+                <div class="sp-design-item-m silent-m">
+                    <div class="silent-desc-m">
+                        <div class="silent-model active">
+                            <div class="model-icon icon-vibrate"></div>
+                            静音
+                        </div>
+                        <div class="silent-model">
+                            <div class="model-icon icon-priority"></div>
+                            勿扰
+                        </div>
+                        <div class="silent-model">
+                            <div class="model-icon icon-all"></div>
+                            响铃
+                        </div>
+                    </div>
+                    <div class="silent-model-m phone2-silent-m active"></div>
+                    <div class="silent-model-m phone2-priority-m"></div>
+                    <div class="silent-model-m phone2-all-m"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--sp color-->
+    <section class="sp-color">
+        <div class="color-item color-gray animated fadeInDown">
+            <div class="color-expand">
+                <h2>月岩灰</h2>
+                <div class="color-btn"></div>
+            </div>
+        </div>
+        <div class="color-item color-black animated fadeInUp">
+            <div class="color-expand"><h2>星辰黑</h2>
+                <div class="color-btn"></div>
+            </div>
+        </div>
+    </section>
+    <!--sp test-->
+    <section class="sp-test">
+        <div class="test-title">
+            <h2>品质检测</h2>
+            <div class="test-btn"></div>
+        </div>
+        <div class="test-content">
+            <h2><span class="mobile-block">经得住考验，</span>才值得你上手体验</h2>
+            <p>严丝合缝的做工，决不妥协的品质，近乎残酷的测试……我们唯有如此的不遗余力，
+                <br>才能让你拿起 OnePlus 5 的时候，毫无顾虑。</p>
+            <div class="test-data">
+                <table>
+                    <tr>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                        <td>
+                            <p class="data-count">10000
+                                <small>次</small>
+                            </p>
+                            <p>反复开关机</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p class="tip">注：以上均为实验室操作，请勿模仿。</p>
+        </div>
+    </section>
+    <!--sp charge-->
+    <section class="sp-charge">
+        <div class="sp-charge-item item-data active">
+            <div class="sp-charge-item-content clearfix">
+                <div class="item-desc">
+                    <div class="sp-contentbox">
+                        <h2>Dash 闪充</h2>
+                        <h3>续航，比上一代好上 20%。</h3>
+                        <p>得益于骁龙 835 的 10nm 工艺和系统优化， 3300mAh电池的续航能力比上一代提升20%。</p>
+                    </div>
+                    <ol class="sp-slide-bar">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="item-data-chart">
+                    <ul>
+                        <li class="active">玩游戏充电</li>
+                        <li>看视频充电</li>
+                        <li>亮屏充电</li>
+                    </ul>
+                    <div class="chart-line">
+                        <img src="../images/star-phone/coordinate-bg.png" alt="">
+                        <div class="chart-item item-game active"></div>
+                        <div class="chart-item item-video"></div>
+                        <div class="chart-item item-screen"></div>
+                    </div>
+                    <ol class="chart-cate">
+                        <li>Star-Phone</li>
+                        <li>Samsung Galaxy S8</li>
+                        <li>Huawei P10 Plus</li>
+                    </ol>
+                    <p class="tip">* OnePlus 5 须同时搭配使用 Dash 闪充适配器和 Dash 闪充数据线，才能开启闪充。</p>
+                </div>
+            </div>
+        </div>
+        <div class="sp-charge-item item-fast">
+            <div class="sp-container">
+                <div class="item-desc">
+                    <div class="sp-contentbox">
+                        <h2>Dash 闪充</h2>
+                        <h3>让你爽快，不让你等待</h3>
+                        <p>无论息屏充电，还是边玩边充，5V/4A Dash 闪充都能让你的手机快速回血，且机身依然凉快。</p>
+                    </div>
+                    <ol class="sp-slide-bar">
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="sp-charge-item item-safety">
+            <div class="sp-container">
+                <div class="item-desc">
+                    <div class="sp-contentbox">
+                        <h2>Dash 闪充</h2>
+                        <h3>让你爽快，不让你等待</h3>
+                        <p>无论息屏充电，还是边玩边充，5V/4A Dash 闪充都能让你的手机快速回血，且机身依然凉快。</p>
+                    </div>
+                    <ol class="sp-slide-bar">
+                        <li></li>
+                        <li></li>
+                        <li class="active"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--sp performance-->
+    <section class="sp-performance">
+        <div class="sp-performance-up">
+            <div class="sp-performance-up-content">
+                <div class="content-title">
+                    <h2><span class="title-m">8GB 大内存，</span>骁龙™ 835 处理器</h2>
+                    <p>让体验不再受限的 8GB 大内存，对性能毫无保留的骁龙™ 835 处理器，64/128GB UFS 2.1 双通道闪存…….让你干什么，都无忧无虑。</p>
+                </div>
+                <p class="tip">Asphalt 8: Airborne © 2017 Gameloft. 图示中出现的汽车品牌版权与财产，为所有者所有。</p>
+            </div>
+        </div>
+        <div class="sp-performance-down">
+            <div class="performance-down-inner">
+                <div class="performance-down-row">
+                    <div class="performance-down-cell cell-text">
+                        <div class="cell-content">
+                            <h3>从此，不知卡顿是何物</h3>
+                            <p>6/8GB 大内存，LPDDR 4X 超强配置。有了它，不管贪得无厌的 App，还是不忍放手的游戏……运行起来都自由自在。</p>
+                            <p class="tip">* 月岩灰搭载 6GB，星辰黑搭载 8GB 大内存。</p>
+                        </div>
+                    </div>
+                    <div class="performance-down-cell cell-img img-ram animated fadeInUp"></div>
+                </div>
+                <div class="performance-down-row">
+                    <div class="performance-down-cell cell-img img-storage animated fadeInUp"></div>
+                    <div class="performance-down-cell cell-text">
+                        <div class="cell-content">
+                            <h3>用过，才知道什么叫流畅</h3>
+                            <p>月岩灰搭载 64 GB 存储，星辰黑搭载 128 GB 存储，均为 UFS 2.1 双通道存储。相比 UFS2.0，UFS 2.1 的带宽速度快了将近一倍。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-down-row">
+                    <div class="performance-down-cell cell-text">
+                        <div class="cell-content">
+                            <h3>常用的，预加载 闲置的，清理掉</h3>
+                            <p>为你预加载使用频率高的 App，提升启动速度，在使用时让你不再等待。也会帮你清理闲置 App，不占用你的内存空间，还更省电。</p>
+                        </div>
+                    </div>
+                    <div class="performance-down-cell cell-img img-priority animated fadeInUp"></div>
+                </div>
+            </div>
+            <!--performance for mobile-->
+            <div class="performance-inner-m">
+                <div class="inner-content-m">
+                    <div class="content-text-m">
+                        <h3>从此。不知卡顿是何物</h3>
+                        <p>6/8GB 大内存，LPDDR 4X 超强配置。有了它，不管贪得无厌的 App，还是不忍放手的游戏……运行起来都自由自在。</p></div>
+                </div>
+                <ol class="sp-slide-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                <div class="inner-imgbox-m">
+                    <div class="img-item img-ram"></div>
+                    <div class="img-item img-storage"></div>
+                    <div class="img-item img-priority"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--sp special-->
+    <section class="sp-special">
+        <div class="sp-special-text">
+            <h2>众多新特性，让你彻底刮目相看</h2>
+            <ul>
+                <li class="active">屏幕提示</li>
+                <li>阅读模式</li>
+                <li>新夜间模式</li>
+            </ul>
+            <div class="text-box">
+                <p class="active">全新 Optic AMOLED 屏幕显示，根据人眼观感对屏幕进行调试，看起来更舒适。新增 P3 广色域标准，让这块屏幕，显示更加出彩。</p>
+                <p>OnePlus 5 将手机和电子阅读器功能合二为一，一样为你带来媲美纸质书的阅读体验。还可根据环境光调整显示，让阅读更加柔和舒适。</p>
+                <p>我们抛弃传统一味发黄的夜间模式，加入全新 RGB 环境光传感器，可根据所处环境光自动调节屏幕显示，不管强光弱光，与你总相宜。</p>
+            </div>
+        </div>
+        <div class="sp-special-text-m">
+            <div class="sp-contentbox active">
+                <h2><span class="mobile-block">众多新特性，</span>让你彻底刮目相看</h2>
+                <h3 class="animated">屏幕显示</h3>
+                <p class="animated">全新 Optic AMOLED 屏幕显示，根据人眼观感对屏幕进行调试，看起来更舒适。新增 P3 广色域标准，让这块屏幕，显示更加出彩。</p>
+            </div>
+            <div class="sp-contentbox">
+                <h2><span class="mobile-block">众多新特性，</span>让你彻底刮目相看</h2>
+                 <h3 class="animated">阅读模式</h3>
+                <p class="animated">OnePlus 5 将手机和电子阅读器功能合二为一，一样为你带来媲美纸质书的阅读体验。还可根据环境光调整显示，让阅读更加柔和舒适。</p>
+            </div>
+            <div class="sp-contentbox">
+                <h2><span class="mobile-block">众多新特性，</span>让你彻底刮目相看</h2>
+                <h3>新夜间模式</h3>
+                <p>我们抛弃传统一味发黄的夜间模式，加入全新 RGB 环境光传感器，可根据所处环境光自动调节屏幕显示，不管强光弱光，与你总相宜。</p>
+            </div>
+            <ol class="sp-slide-bar">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+        <div class="sp-special-imgbox">
+            <div class="sp-special-imgbox-inner">
+                <div class="img-items items-screen"></div>
+                <div class="img-items">
+                    <div class="read-img read-img-yellow"></div>
+                    <div class="read-img read-img-gray"></div>
+                    <div class="change-box">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="img-items">
+                    <div class="read-img read-img-yellow-night"></div>
+                    <div class="read-img read-img-gray-night"></div>
+                    <div class="change-box">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--sp network-->
+    <section class="sp-network">
+        <div class="sp-network-wrap animated fadeInUp">
+            <div class="sp-network-item item-phone active">
+                <div class="sp-contentbox">
+                    <h2>网络</h2>
+                    <h3>出国，可以不用换手机</h3>
+                    <p>OnePlus 5 不仅仅是中国的全网通，多达 6 模 34 频，支持全球主流地区的4G +。下行支持 Cat. 12，上行支持 Cat. 13，下载、上传，速度更快。</p>
+                    <ol class="sp-slide-bar">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="sp-network-item item-sim">
+                <div class="sp-contentbox">
+                    <h2>网络</h2>
+                    <h3>双卡双待 一机两用更自在</h3>
+                    <p>OnePlus 5 支持两张 Nano SIM 卡使用，双卡之间自如切换，让你的生活更便捷。</p>
+                    <ol class="sp-slide-bar">
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="sp-network-item item-unlock">
+                <div class="sp-contentbox">
+                    <h2>网络</h2>
+                    <h3>双 WiFi 天线 上网更快更稳定</h3>
+                    <p>支持 2 X 2 MIMO 双路 WiFi，信号覆盖更广泛，上网速度更快。全新 802.11 a/b/g/n/ac, 2.4G/5G 无线网络连接，WiFi更稳定，快速。</p>
+                    <ol class="sp-slide-bar">
+                        <li></li>
+                        <li></li>
+                        <li class="active"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="sp-itembox-m animated fadeInUp">
+            <div class="sp-item-img img-phone-m active"></div>
+            <div class="sp-item-img img-sim-m"></div>
+            <div class="sp-item-img img-unlock-m"></div>
+        </div>
+    </section>
+    <!--sp matters-->
+    <section class="sp-matters">
+        <div class="sp-matters-content">
+            <div class="sp-matters-content-inner animated fadeInUp">
+                <div class="sp-contentbox active">
+                    <h2>基础体验</h2>
+                    <h3>一步到位的快捷支付</h3>
+                    <p>息屏或锁屏状态下，长按 Home 键即可入支付页面，安全又方便。以往需要 4 步，现在，1 步搞定。</p>
+                </div>
+                <div class="sp-contentbox">
+                    <h2>基础体验</h2>
+                    <h3>更为给力的振动马达</h3>
+                    <p>OnePlus 5 的振动马达的反馈更有力，3 种振动强度，重要通知不再错过。5 种振动节奏，随心选择。</p>
+                </div>
+                <div class="sp-contentbox ">
+                    <h2>基础体验</h2>
+                    <h3>无需按压的前置指纹</h3>
+                    <p>正面触摸式指纹，无需按压，与菜单键、返回键交互体验统一。0.2s 快速解锁，支持微信、支付宝支付。</p>
+                </div>
+                <div class="sp-contentbox">
+                    <h2>基础体验</h2>
+                    <h3>3.5 mm 耳机孔还在</h3>
+                    <p>3.5 mm 耳机孔依然为你保留，为你省去充电时听不到音乐的烦恼。</p>
+                </div>
+                <ol class="sp-slide-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+        <div class="sp-matters-imgbox animated fadeInUp">
+            <div class="sp-matters-wrap">
+                <div class="sp-matters-img img-display"></div>
+                <div class="sp-matters-img img-unibody"></div>
+                <div class="sp-matters-img img-scanner"></div>
+                <div class="sp-matters-img img-jack"></div>
+            </div>
+        </div>
+    </section>
+    <!--tip-->
+    <section class="sp-final">
+        <p class="tip">备注：以上页面中所涉及到的数据均由实验室或供应商提供，实际体验情况可能会因测试软件版本、具体测试环境、具体版本而略微有差异，具体以实际体验为准。</p>
+    </section>
+</div>
+<!--底部 开始-->
+<div class="lowest-footer">
+    <div class="link-msg-bg">
+        <div class="link-msg">
+            <div class="left">
+                <ul>
+                    <li>super产品</li>
+                    <li><a href="#">OnePlus 5</a></li>
+                    <li><a href="#">一加手机 3T</a></li>
+                    <li><a href="#">一加手机 3</a></li>
+                </ul>
+                <ul>
+                    <li>关于super</li>
+                    <li><a href="#">了解super</a></li>
+                    <li><a href="#">加入super</a></li>
+                    <li><a href="#">H2OS</a></li>
+                </ul>
+                <ul>
+                    <li>服务支持</li>
+                    <li><a href="#">自助服务</a></li>
+                    <li><a href="#">技术支持</a></li>
+                    <li><a href="#">售后服务</a></li>
+                    <li><a href="#">一加加多宝</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>400-888-1111</h3>
+                <a class="online-btn" href="#">在线客服</a>
+            </div>
+        </div>
+    </div>
+    <div class="lowest-level">
+        <div class="item">
+            <span>© 2013-2017 OnePlus. All Rights Reserved. </span>
+            <span><a href="#">(粤ICP备13088308号-1)</a></span>
+            <span class="cnnic"><img src="../images/common/cnnic.png" alt=""></span>
+            <span class="sm"><img src="../images/common/sm.png" alt=""></span>
+            <span class="fr flag">Change location<a href="#"><img src="../images/common/starflag.png" alt=""></a></span>
+            <br/>
+            <span class="record"><a href="#"><img src="../images/common/record.png" alt="">粤公网安备 44030402000178号</a></span>
+        </div>
+    </div>
+</div>
+<!--底部 结束-->
+<!--小屏幕下的底部 开始-->
+<div class="less528-index-footer">
+    <div class="list-msg">
+        <ul class="top">
+            <li>
+                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
+                <div class="less528-footer-content">
+                    <p><a href="#">oneplus5</a></p>
+                    <p><a href="#">superphone 3T</a></p>
+                    <p><a href="#">superphone3</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
+                <div class="less528-footer-content">
+                    <p><a href="#">oneplus5</a></p>
+                    <p><a href="#">superphone 3T</a></p>
+                    <p><a href="#">superphone3</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
+                <div class="less528-footer-content">
+                    <p><a href="#">oneplus5</a></p>
+                    <p><a href="#">superphone 3T</a></p>
+                    <p><a href="#">superphone3</a></p>
+                </div>
+            </li>
+        </ul>
+        <div class="bottom">
+            <div class="box">
+                <div class="left">
+                    <span>客服电话:</span><span>400-888-1111</span>
+                </div>
+                <div class="right">
+                    <span>Change location</span><a href="#"><img src="../images/common/starflag.png" alt=""></a>
+                </div>
+            </div>
+            <a href="#">在线客服</a>
+        </div>
+    </div>
+    <div class="lowest-level">
+        <div class="left">
+            <p><a href="#"><img src="../images/common/record.png" alt="">粤公网安备 44030402000178号</a></p>
+            <p>© 2013-2017 OnePlus. All Rights Reserved.</p>
+            <p>备案号：<a href="#">粤ICP备13088308号-1</a></p>
+        </div>
+        <div class="mid"><a href="#"><img src="../images/common/cnnic.png" alt=""></a></div>
+        <div class="right"><a href="#"><img src="../images/common/sm.png" alt=""></a></div>
+    </div>
+</div>
+<!--小屏幕下的底部 结束-->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/star-phone.js"></script>
+</body>
+</html>

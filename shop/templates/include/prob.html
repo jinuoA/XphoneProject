@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!--常见问题 开始-->
+<a name="fag"></a>
+<section class="fag">
+    <div class="wrap">
+        <div class="fag-totle">
+            {% for prob in prob_list %}
+            <div class="item">
+                <div class="left">{{ prob.title }}</div>
+                <div class="right">
+                    <ul class="fag-des">
+                        <li>
+                            {{ prob.desc }}
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>>

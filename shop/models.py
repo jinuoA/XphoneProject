@@ -111,8 +111,72 @@ class ShopSales(models.Model):
     def __str__(self):
         return self.saleName.encode('utf-8')
 
+#商品展示
+
+class Product_details(models.Model):
+    name = models.CharField(max_length=30,)
+    title = models.CharField(max_length=30,verbose_name="标题")
+    desc = models.CharField(max_length=200,verbose_name="描述")
+    price = models.DecimalField(max_digits=5,decimal_places=2,verbose_name="商品价格")
+    img_url = models.ImageField(upload_to='shop/product/%Y/%m')
+    sale = models.ForeignKey(ShopSales,default=1)
 
 
+class Meta():
+    verbose_name = '商品展示'
+    verbose_name_plural = verbose_name
+
+
+def __unicode__(self):
+    return self.title
+
+
+#商品详情
+
+class Product_desc(models.Model):
+    img_url = models.ImageField(upload_to='shop/product_desc/%Y/%m')
+    title = models.CharField(max_length=30)
+    desc = models.CharField(max_length=100)
+    sale = models.ForeignKey(ShopSales,default=1)
+    index = models.IntegerField(default=999, verbose_name="排序")
+
+    class Meta():
+        verbose_name = '商品详情'
+        verbose_name_plural = verbose_name
+
+
+    def __unicode__(self):
+        return self.title
+
+#规格参数
+
+class Arg(models.Model):
+    title = models.CharField(max_length=10)
+    desc = models.CharField(max_length=100)
+    sale = models.ForeignKey(ShopSales,default=1)
+    index = models.IntegerField(default=999,verbose_name="排序")
+    class Meta():
+        verbose_name = '规格参数'
+        verbose_name_plural = verbose_name
+
+
+    def __unicode__(self):
+        return self.title
+#常见问题
+
+class Prob(models.Model):
+    title = models.CharField(max_length=30)
+    desc = models.CharField(max_length=2000)
+    index = models.IntegerField(default=999, verbose_name="排序")
+
+
+    class Meta():
+        verbose_name = '常见问题'
+        verbose_name_plural = verbose_name
+
+
+    def __unicode__(self):
+        return self.title
 
 
 #手机参数

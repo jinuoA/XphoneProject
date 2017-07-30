@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<div class="pagination">
+    {% if article_list.has_previous %}
+    <a class="prev focus" href="?page={{ article_list.previous_page_number }}"><</a>
+    {% endif %}
+    <a class="focus" href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+    <a href="">4</a>
+    <a href="">5</a>
+    <a href="">6</a>
+    <a class="eclipse" href="">···</a>
+    <a href="">{{ article_list.number }}</a>
+    {% if article_list.has.next %}
+    <a class="next" href="?page={{ article_list.next_page_number }}">></a>
+    {% endif %}
+</div>

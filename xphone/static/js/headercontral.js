@@ -4,7 +4,6 @@
 
 var bodyheight = $(document.body).height();
 $("#filter").height(bodyheight);
-console.log(bodyheight);
 //大屏幕下点击搜索按钮
 $("#index-search").click(function () {
     $(".header-mid").hide();

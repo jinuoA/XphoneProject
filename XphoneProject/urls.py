@@ -17,7 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from shop.upload import upload_image
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r"^uploads/(?P<path>.*)$",\
@@ -30,4 +31,6 @@ urlpatterns = [
     url(r'', include('server.urls')),
     url(r'', include('OnePlus5.urls')),
     url(r'', include('xphone.urls')),
-]
+    url(r'', include('phone_auth.urls')),
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

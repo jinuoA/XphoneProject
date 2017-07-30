@@ -15,7 +15,7 @@ $(window).resize(function(){
 $(window).scroll(function() {
     var scolltop = $(this).scrollTop();
     if(scolltop>=80){
-        $(".second-header-nav").css({position:"fixed",top:"-85px"});
+        $(".second-header-nav").css({position:"fixed",top:"-85px",boxShadow:"0 0 10px 3px rgba(0,0,0,.2)"});
         arrigroup.addClass("scale0");
     }
     else {

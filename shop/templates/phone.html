@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+{% include 'include/nav.html' %}
+{% block container %}
+<section>
+    <div class="banner">
+        <a href="{% url 'store' %}">
+{#            <img src="{% static 'images/store/OnePlus5Shopbanner0704-large.jpg' %}" alt="">#}
+        </a>
+    </div>
+</section>
+{% endblock %}
+{% include 'include/foolter.html' %}
+{% endblock %}

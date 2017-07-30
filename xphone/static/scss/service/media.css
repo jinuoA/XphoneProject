@@ -79,8 +79,12 @@
     width: 16px;
     margin-top: -20px; } }
 @media screen and (max-width: 767px) {
+  .service-customer {
+    background: url("../../images/service/nserv-point-m.jpg") center top no-repeat #f3f3f3; }
+
   .ser-cus-content .ser-cus-div {
-    display: none; }
+    display: none;
+    transition: 2s; }
 
   .ser-cus-div2 {
     display: block;
@@ -91,7 +95,8 @@
       height: 330px; }
       .ser-cus-div2 .ser-cus-div .ser-cus-left, .ser-cus-div2 .ser-cus-div .ser-cus-right {
         position: absolute;
-        width: 673px; } }
+        width: 673px;
+        border-right: none; } }
 @media screen and (max-width: 640px) {
   .service-question header {
     height: auto;

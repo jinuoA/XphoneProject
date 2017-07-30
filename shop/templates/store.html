@@ -1,42 +1,11 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<!--第二级头部导航栏 开始-->
-<section class="second-header-nav">
-    <div class="wrap">
-       <ul class="subnav-container">
-           <li><a href="#">
-                <i class="i-phone"></i>
-               <span>手机</span>
-           </a></li>
-           <li><a href="#">
-               <i class="i-headset"></i>
-               <span>耳机、音响</span>
-           </a></li>
-           <li><a href="#">
-               <i class="i-shell"></i>
-               <span>壳/后盖/膜</span>
-           </a></li>
-           <li><a href="#">
-               <i class="i-usb"></i>
-               <span>适配器/数据线</span>
-           </a></li>
-           <li><a href="#">
-               <i class="i-suit"></i>
-               <span>套装</span>
-           </a></li>
-           <li><a href="#">
-               <i class="i-label"></i>
-               <span>生活馆</span>
-           </a></li>
-       </ul>
-    </div>
-</section>
-<!--第二级头部导航栏 结束-->
+{% include 'include/nav.html' %}
 <!--banner 开始-->
 <section>
     <div class="banner">
-        <a href="#">
+        <a href="{% url 'OnePlus5' %}">
 {#            <img src="{% static 'images/store/OnePlus5Shopbanner0704-large.jpg' %}" alt="">#}
         </a>
     </div>
@@ -47,8 +16,8 @@
     <ul class="hero-goods-wrap">
         {% for good in good_lsit %}
         <li>
-            <a href="{% url 'product' %}/{{ good.id }}">
-                <img src="uploads/{{ good.saleImg }}" alt="">
+            <a href="{% url 'product_details' good.id %}">
+                <img src="{% static good.saleImg.url %}" alt="">
             </a>
         </li>
         <li>
@@ -65,8 +34,8 @@
             <ul class="goods-list">
                 {% for Oneplus in Oneplus_list %}
                 <li>
-                    <a href="#">
-                        <img src="uploads/{{ Oneplus.saleImg }}" alt="">
+                    <a href="{% url 'product_details' Oneplus.id %}">
+                        <img src="{% static Oneplus.saleImg.url  %}" alt="">
                         <h3>{{ Oneplus.saleDese }}</h3>
                         <p class="price">¥ {{ Oneplus.salePrice }}</p>
                     </a>
@@ -81,8 +50,8 @@
             <ul class="goods-list">
                 {% for rim in rim_list %}
                 <li>
-                    <a href="#">
-                        <img src="uploads/{{ rim.saleImg }}" alt="">
+                    <a href="{% url 'product_details' rim.id %}">
+                        <img src="{% static rim.saleImg.url %}" alt="">
                         <h3>{{ rim.saleDese }}</h3>
                         <p class="price">¥ {{ rim.salePrice }}</p>
                     </a>
@@ -95,33 +64,6 @@
 </section>
 <!--主体第三部分商品展示 结束-->
 <!--第四部分主体 开始-->
-<div class="index-footer">
-    <div class="index-footer-box">
-        <a href="#">
-            <div class="pic item1"></div>
-            <div class="des">
-                1小时售后派单响应
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic item2"></div>
-            <div class="des">
-                1小时售后派单响应
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic item3"></div>
-            <div class="des">
-                1小时售后派单响应
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic item4"></div>
-            <div class="des">
-                1小时售后派单响应
-            </div>
-        </a>
-    </div>
-</div>
+{% include  'include/foolter.html' %}
 <!--第四部分主体 结束-->
 {% endblock %}

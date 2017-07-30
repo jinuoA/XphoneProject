@@ -93,7 +93,6 @@
   .div-btn{
     li{
       a{
-        //background: #cccccc;
         width: 12px;
         height: 12px;
         display: block;
@@ -125,9 +124,14 @@
 
 //service-customer
 @media screen and (max-width: 767px){
+  .service-customer{
+    background: url("../../images/service/nserv-point-m.jpg")center top no-repeat #f3f3f3;
+  }
+  
   .ser-cus-content{
     .ser-cus-div{
       display: none;
+      transition: 2s;
     }
   }
   .ser-cus-div2{
@@ -141,7 +145,9 @@
           .ser-cus-left,.ser-cus-right{
             position: absolute;
             width: 673px;
+            border-right: none;
           }
+
       }
   }
 }

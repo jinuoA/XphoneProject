@@ -59,6 +59,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'XphoneProject.urls'
 
+# WSGI_APPLICATION = 'XphoneProject.wsgi.application'
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -71,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'xphone.views.global_setting',
             ],
         },
     },
@@ -97,9 +101,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -117,9 +121,20 @@ STATICFILES_DIR = (
 )
 
 
+
 MEDIA_URL = '/uploads/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'uploads')
+
+
+# 邮件配置
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST_USER = '1668488211@qq.com'
+EMAIL_HOST_PASSWORD = 'reveqrhbrisdbjjb'
+EMAIL_PORT = '465'
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = '2xphoneTeam <1668488211@qq.com>'
+
 
 
 #日志

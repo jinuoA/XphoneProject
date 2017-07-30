@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Star-Phone | 双摄更高清</title>
+    <!--animate-->
+    <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <!--normalize-->
+    <link rel="stylesheet" href="../scss/common/reset.css">
+    <!--common-->
+    <link href="../scss/common/common.css" rel="stylesheet">
+    <!--star phone-->
+    <link href="../scss/star-phone/star-phone.css" rel="stylesheet">
+</head>
+<body>
+<!--头部导航栏 开始-->
+<header>
+    <div class="header-wrap">
+        <!--左边 开始-->
+        <div class="header-left">
+            <a href="index.html">
+                <img class="img-responsive" src="../images/common/logo.png" alt="">
+            </a>
+        </div>
+        <!--左边 结束-->
+        <!--中间 开始-->
+        <div class="header-mid">
+            <ul>
+                <li>
+                    <a href="star-phone.html">
+                        oneplus5
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../shop/templates/store.html">
+                        商城
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="service.html">
+                        服务
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="bolo.html">
+                        博客
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        论坛
+                        <i></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--中间 结束-->
+        <!--右边 开始-->
+        <div class="header-right">
+            <div class="search" id="index-search">
+                <span></span>
+            </div>
+            <div class="shop-car">
+                <span></span>
+            </div>
+            <div class="user">
+                <span></span>
+                <span class="j-loginin"></span>
+                <ul class="logout">
+                    <li>我的订单</li>
+                    <li>super账户</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+        <!--右边 结束-->
+        <!--点击搜索按钮 开始-->
+        <div class="search-hidden">
+            <div class="top">
+                <div class="hidden-input">
+                    <form action="">
+                        <input type="button" placeholder="">
+                        <input type="text">
+                    </form>
+                </div>
+                <div class="delete-btn"></div>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><a href="star-phone.htmml">oneplus5</a></li>
+                    <li><a href="#">super快闪充电器</a></li>
+                    <li><a href="#">oneplus 5保护壳</a></li>
+                    <li><a href="#">电子发票</a></li>
+                    <li><a href="#">纳税人识别号</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--点击搜索按钮 结束-->
+        <!--屏幕小于768 开始-->
+        <div class="less768">
+            <div class="shop-car"><span></span></div>
+            <div class="user">
+                <span></span>
+                <span class="j-loginin"></span>
+                <ul class="logout">
+                    <li>我的订单</li>
+                    <li>super账户</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+            <div class="fold" id="header-fold"><span ></span></div>
+        </div>
+        <!--屏幕小于768 结束-->
+    </div>
+</header>
+<!--头部导航栏 结束-->
+<!--小屏幕下隐藏的部分 开始-->
+<div class="less768-menu dn">
+    <ul id="less768-ul">
+        <li><a href="star-phone.html">oneplus5</a></li>
+        <li><a href="../../shop/templates/store.html">商城</a></li>
+        <li><a href="service.html">服务</a></li>
+        <li><a href="bolo.html">博客</a></li>
+        <li><a href="#">论坛</a></li>
+    </ul>
+    <div class="arrow-down" id="less768-header-arrow-down">
+        <i class="superfont icon-packup"></i>
+    </div>
+    <div class="less768-menu-form">
+        <form action="">
+            <input type="text" placeholder="搜索您的商品名称" id="less768-input-txt">
+            <input type="submit" value="&nbsp;">
+        </form>
+    </div>
+</div>
+<!--小屏幕下隐藏的部分 结束-->

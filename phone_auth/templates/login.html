@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block style-scss %}
+<link rel="stylesheet" href="{% static 'scss/common/reset.css' %}">
+<link rel="stylesheet" href="{% static 'scss/common/login.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="login">
+        <div class="login_box">
+            <!--<div class="login_container">-->
+                <div class="login_input fl">
+                    <h2>登&nbsp;录</h2>
+                        <form action="{% url 'login' %}" method="post">
+                            {% csrf_token %}
+                            <div class="login_info">
+                                <label>
+                                    {{ login_form.username }}
+                                </label>
+                                <label>
+                                    {{ login_form.password }}
+                                </label>
+                            </div>
+                            <div class="login_tips">
+                                {% if login_error %}
+                                <span>{{ login_error }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="login_forget">
+                                <a>忘记密码？</a>
+                            </div>
+                            <div class="login_btn">
+                                <a><input style="background-color: #eb0028;" type="submit" value="确&nbsp;认"></a>
+                            </div>
+                        </form>
+                    <div class="login_sign">
+                        <span>没有二减账号？<a href="/reg">立即注册</a></span>
+                    </div>
+                </div>
+                <div class="login_share fr">
+                    <h2>选择其他方式登录</h2>
+                    <a class="login_qq">
+                        <i></i>
+                        <span>QQ 快捷登录</span>
+                    </a>
+                    <a>
+                        <i></i>
+                        <span>微博快捷登录</span>
+                    </a>
+                </div>
+            <!--</div>-->
+        </div>
+    </div>
+{% endblock %}

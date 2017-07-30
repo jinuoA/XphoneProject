@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import render
-from shop.models import *
+from django.shortcuts import render,Http404
 from xphone.models import *
+from shop.models import *
 import logging
 # Create your views here.
 
@@ -10,8 +10,6 @@ logger = logging.getLogger('shop.views')
 
 def store(request):
     try:
-        #导航
-        nav_list = NavBars.objects.all()
         #商品种类
         tag_list = Navtags.objects.all()
         #搜索
@@ -27,9 +25,38 @@ def store(request):
         logger.error(e)
     return render(request,'store.html',locals())
 
-def product(request):
+def products(request):
     try:
         pass
     except Exception as e:
         logger.error(u"访问的页面不存在")
-    return render(request,'product.html',locals())
+    return render(request,'products.html',locals())
+
+
+def phone(request):
+    try:
+        nav_list = NavBars.objects.all()
+    except Exception as e:
+        logger.error(e)
+    return render(request,'phone.html',locals())
+
+def product_details(request,id):
+    try:
+        sale = ShopSales.objects.all()
+
+
+        try:
+
+            arg_list = Arg.objects.filter(sale_id=id)
+            pro_list = Product_desc.objects.filter(sale_id=id)[0:1]
+            pro_list1 = Product_desc.objects.filter(sale_id=id)[1:2]
+            prob_list = Prob.objects.all()
+
+
+        except Product_details.DoesNotExist:
+            raise Http404
+
+    except Exception as e:
+        pass
+    return render(request,'product_details.html',locals())
+
