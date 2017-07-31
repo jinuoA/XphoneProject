@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Jose Francisco Diaz / picssel.com" />
+<title>html弹出视频</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.fancybox.css' %}" />
+<script src="{% static 'js2/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js2/jwplayer.js' %}"></script>
+<script type="text/javascript" src="{% static 'js2/jquery.fancybox.js' %}"></script>
+{% for vid in video_list %}
+
+<embed src='{{ vid.video_url }}' allowFullScreen='true' quality='high' width='1000' height='500' align='middle'
+       allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+{% endfor %}
+<style type="text/css">
+ a {outline: 0 none; text-decoration: none;}
+ a img {border: 0 none;}
+ #wrap { width: 800px;  margin: 20px auto; font-family: arial, sans-serif; font-size: 14px;}
+</style>
+<script>
+/* <![CDATA[ */
+$(document).ready(function () {
+  $(".fancybox").fancybox({
+    fitToView: false,
+    content: '<span></span>', // create temp content
+    scrolling: 'no',
+    afterLoad: function () {
+      var $width = $(this.element).data('width'); // get dimensions from data attributes
+      var $height = $(this.element).data('height');
+      this.content = "<embed src='player.swf?file=" + this.href + "&autostart=true&amp;wmode=opaque' type='application/x-shockwave-flash' width='" + $width + "' height='" + $height + "'></embed>"; // replace temp content
+    }
+  });
+}); // ready
+/* ]]> */
+</script>
+</head>
+<body>
+<div id="wrap">
+ 
+{# <a class="fancybox" href="{% static 'images/womendeweilai.mp4' %}" data-width="640" data-height="360"><img src="{% static 'images/seperator.png' %}" width="380" height="254"></a>#}
+
+</div><!--wrap-->
+</body> 
+</html>

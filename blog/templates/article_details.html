@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="filter" id="filter"></div>
+<!--banner-->
+<div class="banner banner-blog">
+    <h2>STAR-PHONE<br>BLOG</h2>
+</div>
+<!--sub nav-->
+{% include 'include/sub_nav.html' %}
+<!--main-->
+<div class="tab-page">
+    <div class="page-container clearfix">
+        <!--search box-->
+        <div class="searchbox">
+            <div class="searchbox-inner">
+                <form action="">
+                    <input class="input" type="text" title="search">
+                    <button></button>
+                </form>
+            </div>
+        </div>
+        <!--article-->
+        <div class="article">
+            <!--article main-->
+            <div class="article-inner">
+                <!--article cell for details-->
+                <div class="article-cell">
+                    {% include 'include/article.html' %}
+{#                    <!--article title-->#}
+{#                    <div class="article-title"><a href="">为什么 OnePlus 5 的灰色，要比以往更深一些？</a></div>#}
+{#                    <!--article author and share-->#}
+{#                    <div class="article-source">#}
+{#                        <span class="article-origin">#}
+{#                            <span class="article-year">2017.07.03<span class="article-time">20:30</span></span>#}
+{#                            <span class="article-author">By: OnePlus博客</span>#}
+{#                        </span>#}
+{#                        <ul class="article-share clearfix">#}
+{#                            <li><a href="">#}
+{#                                <i class="icon i-like"></i>#}
+{#                                <span class="like-count">2</span>#}
+{#                            </a></li>#}
+{#                            <li><a href="">#}
+{#                                <i class="icon i-praise"></i>#}
+{#                                <span class="praise-count">15505</span>#}
+{#                            </a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                    <a class="img-wrap" href=""><img src="{% static 'images/blog/720.jpg' %}" alt=""></a>#}
+{#                    <div class="article-text">#}
+{#                        如果说黑色是亘古不变不怒自威的色彩教父，那么灰色似乎则是更加懂得拿捏中庸之道的谦谦君子。当它们和周边的事物在一起时，黑色的出场绝对自带主角光环，一举一动间彰显舍我其谁的风范；而灰色则在众生之中显得更为谦逊，淡妆浓抹总相宜。#}
+{#                    </div>#}
+                    <ul class="details-share clearfix">
+                        <li><a class="share-sina" href="javascript:void(0);"></a></li>
+                        <li><a class="share-qzone" href="javascript:void(0);"></a></li>
+                        <li><a class="share-douban" href="javascript:void(0);"></a></li>
+                        <li><a class="share-wechat" href="javascript:void(0);"></a></li>
+                    </ul>
+                    <div class="details-switch">
+                        <a class="switch-prev" href="">上一篇</a>
+                        <a class="switch-next" href="">下一篇</a>
+                    </div>
+                </div>
+                <!--article comments-->
+                <div class="article-comments">
+                    <div class="article-comments-textarea">
+                        <form action="">
+                            <div class="textarea-input">
+                                <div class="textarea-input-avatar">
+                                    <div class="avatar-img"></div>
+                                </div>
+                                <div class="textarea-input-text">
+                                    <textarea class="" name="text" title="text" placeholder="我想说···"></textarea>
+                                </div>
+                            </div>
+                            <div class="textarea-info">
+                                <div class="textarea-words">0<span>/150</span></div>
+                                <button class="textarea-submit" type="submit">回复</button>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="article-comments-counts">
+                        <li>全部评论（<span>25</span>）</li>
+                        <li>我的评论（<span>0</span>）</li>
+                    </ul>
+                    <ul class="article-comments-lists">
+                        <li>
+                            <div class="lists-item">
+                                <div class="avatar-img"></div>
+                                <div class="lists-item-content">
+                                    <div class="lists-item-content-head">
+                                        <span class="head-left">
+                                            I1500924880753
+                                            <span class="article-time">2017-07-25 03:39</span>
+                                        </span>
+                                        <span class="head-right"></span>
+                                    </div>
+                                    <div class="lists-item-content-desc">
+                                        期待手持一加5，干净的系统，可创造性更强，高通835的处理器，和顶尖的内存处理器，对于我们这种玩机少年来说简直是福利，钟爱1+的原因很简单，因为这才是自己的手机，不像小米和努比亚性能配置媲美1+手机，但是可玩性和可塑造性没有这么高，植入品牌和核心系统太多太硬
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reply-box">
+                                <div class="article-comments-textarea">
+                                    <form action="">
+                                        <div class="textarea-input">
+                                            <div class="textarea-input-avatar">
+                                                <div class="avatar-img"></div>
+                                            </div>
+                                            <div class="textarea-input-text">
+                                                <textarea class="" name="text" title="text"
+                                                          placeholder="我想说···"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="textarea-info">
+                                            <div class="textarea-words">0<span>/150</span></div>
+                                            <div class="reply-buttons">
+                                                <button class="textarea-cancel">取消</button>
+                                                <button class="textarea-submit" type="submit">回复</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lists-item">
+                                <div class="avatar-img"></div>
+                                <div class="lists-item-content">
+                                    <div class="lists-item-content-head">
+                                        <span class="head-left">
+                                            I1500924880753
+                                            <span class="article-time">2017-07-25 03:39</span>
+                                        </span>
+                                        <span class="head-right"></span>
+                                    </div>
+                                    <div class="lists-item-content-desc">
+                                        期待手持一加5，干净的系统，可创造性更强，高通835的处理器，和顶尖的内存处理器，对于我们这种玩机少年来说简直是福利，钟爱1+的原因很简单，因为这才是自己的手机，不像小米和努比亚性能配置媲美1+手机，但是可玩性和可塑造性没有这么高，植入品牌和核心系统太多太硬
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reply-box">
+                                <div class="article-comments-textarea">
+                                    <form action="">
+                                        <div class="textarea-input">
+                                            <div class="textarea-input-avatar">
+                                                <div class="avatar-img"></div>
+                                            </div>
+                                            <div class="textarea-input-text">
+                                                <textarea class="" name="text" title="text"
+                                                          placeholder="我想说···"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="textarea-info">
+                                            <div class="textarea-words">0<span>/150</span></div>
+                                            <div class="reply-buttons">
+                                                <button class="textarea-cancel">取消</button>
+                                                <button class="textarea-submit" type="submit">回复</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lists-item">
+                                <div class="avatar-img"></div>
+                                <div class="lists-item-content">
+                                    <div class="lists-item-content-head">
+                                        <span class="head-left">
+                                            I1500924880753
+                                            <span class="article-time">2017-07-25 03:39</span>
+                                        </span>
+                                        <span class="head-right"></span>
+                                    </div>
+                                    <div class="lists-item-content-desc">
+                                        期待手持一加5，干净的系统，可创造性更强，高通835的处理器，和顶尖的内存处理器，对于我们这种玩机少年来说简直是福利，钟爱1+的原因很简单，因为这才是自己的手机，不像小米和努比亚性能配置媲美1+手机，但是可玩性和可塑造性没有这么高，植入品牌和核心系统太多太硬
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reply-box">
+                                <div class="article-comments-textarea">
+                                    <form action="">
+                                        <div class="textarea-input">
+                                            <div class="textarea-input-avatar">
+                                                <div class="avatar-img"></div>
+                                            </div>
+                                            <div class="textarea-input-text">
+                                                <textarea class="" name="text" title="text"
+                                                          placeholder="我想说···"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="textarea-info">
+                                            <div class="textarea-words">0<span>/150</span></div>
+                                            <div class="reply-buttons">
+                                                <button class="textarea-cancel">取消</button>
+                                                <button class="textarea-submit" type="submit">回复</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--load more comments-->
+                    <div class="load-more">
+                        <a href="">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--recommendation-->
+        <div class="recommendation">
+            <h3>热点推荐</h3>
+            <ul class="recommendation-inner">
+                <li>
+                    <a class="clearfix" href="">
+                        <img src="{% static 'images/blog/90.jpg' %}" alt="">
+                        <span class="recommendation-desc">
+                            <span class="recommendation-desc-text">为什么 OnePlus 5 的灰色，要比以往更深一些？</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="clearfix" href="">
+                        <img src="{% static 'images/blog/90.jpg' %}" alt="">
+                        <span class="recommendation-desc">
+                            <span class="recommendation-desc-text">为什么 OnePlus 5 的灰色，要比以往更深一些？</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="clearfix" href="">
+                        <img src="{% static 'images/blog/90.jpg' %}" alt="">
+                        <span class="recommendation-desc">
+                            <span class="recommendation-desc-text">为什么 OnePlus 5 的灰色，要比以往更深一些？</span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

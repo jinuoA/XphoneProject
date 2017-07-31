@@ -22,17 +22,18 @@ def global_setting(request):
     }
 
 
-# def base(request):
-#     try:
-#         #产品
-#         product_list = Product.objects.all()
-#         #关于super
-#         about_list = About.objects.all()
-#         #服务支持
-#         service_list = Server.objects.all()
-#     except:
-#         pass
-#     return render(request,'index1.html',locals())
+
+def base(request):
+    try:
+        #产品
+        product_list = Product.objects.all()
+        #关于super
+        about_list = About.objects.all()
+        #服务支持
+        service_list = Server.objects.all()
+    except:
+        pass
+    return render(request,'base.html',locals())
 
 # def index(request):
 #     try:

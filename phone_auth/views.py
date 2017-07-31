@@ -11,6 +11,7 @@ from itsdangerous import URLSafeTimedSerializer as utsr
 
 from django.core.mail import send_mail
 from XphoneProject.settings import SECRET_KEY, EMAIL_HOST_USER, DEFAULT_FROM_EMAIL, MEDIA_URL, MEDIA_ROOT
+from xphone.views import *
 # Create your views here.
 
 # 邮件验证连接编码
@@ -29,6 +30,10 @@ class Token(object):
 
 token_confirm = Token(SECRET_KEY)
 
+# def index(request):
+#     title = 'super + 首页'
+#     return render(request, 'index1.html', locals())
+
 
 # 注册
 def do_reg(request):
@@ -40,7 +45,7 @@ def do_reg(request):
                 print '-' * 50
                 cd = reg_form.cleaned_data
                 username, password, email = cd['username'], cd['password'], cd['email']
-                user = UserInfo.objects.create(username=username, password=make_password(password), email=email, is_active=False)
+                user = User.objects.create(username=username, password=make_password(password), email=email, is_active=False)
                 # user.backend = 'django.contrib.auth.backends.ModelBackend'  # 指定的默认登录方式
                 # login(request, user)
                 # return HttpResponse('注册成功！')
@@ -52,7 +57,7 @@ def do_reg(request):
                 message = "\n".join([u'亲爱的{0},欢迎加入super+手机大家庭'.format(username), u'请访问该链接，完成用户验证：',
                                      '/'.join(['http://127.0.0.1:8000', 'account/activate', token])])
                 send_mail(u'注册用户验证信息', message, DEFAULT_FROM_EMAIL, [email])
-                # return render(request, 'index_1.html', locals())
+                # return render(request, 'index.html', locals())
                 return HttpResponse(u"请登录到注册邮箱中验证用户，有效期为1个小时。")
             else:
                 return render(request, 'sign.html', locals())
@@ -70,8 +75,8 @@ def active_user(request, token):
     except:
         return HttpResponse(u'对不起，验证链接已经过期')
     try:
-        user = UserInfo.objects.get(username=username)
-    except UserInfo.DoesNotExist:
+        user = User.objects.get(username=username)
+    except User.DoesNotExist:
         return HttpResponse(u'对不起，您所验证的用户不存在，请重新注册')
     print user.username
     user.is_active = True
@@ -91,7 +96,7 @@ def do_login(request):
                 if user is not None:
                     user.backend = 'django.contrib.auth.backends.ModelBackend'
                     login(request, user)
-                    return HttpResponseRedirect(reverse(index1))
+                    return HttpResponseRedirect(reverse(index))
                 else:
                     login_error = '登录失败，请检查用户名密码是否正确。'
                     return render(request, 'login.html', locals())
@@ -106,4 +111,4 @@ def do_logout(request):
         logout(request)
     except Exception as e:
         print e
-    return render(request,'logout.html',locals())
+    return HttpResponseRedirect(reverse(index))

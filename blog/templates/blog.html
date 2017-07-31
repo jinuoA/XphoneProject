@@ -25,39 +25,7 @@
             <div class="article-inner">
                 {% for article in article_list %}
                 <div class="article-cell clearfix">
-                    <div class="article-title"><a href="">{{ article.title }}</a></div>
-                    <div class="article-source">
-                        <span class="article-origin">
-                            <span class="article-year">{{ article.date_publish |date:'Y-m-d'}}<span class="article-time">{{ article.date_publish |date:'H:m' }}</span></span>
-                            <span class="article-author">{{ article.user }}</span>
-                        </span>
-                        <ul class="article-share clearfix">
-                            <li><a href="">
-                                <i class="icon i-like"></i>
-                                <span class="like-count">{{ article.click_count }}</span>
-                            </a></li>
-                            <li><a href="">
-                                <i class="icon i-praise"></i>
-                                <span class="praise-count">{{ article.collect_count }}</span>
-                            </a></li>
-                            <li class="share-way">
-                                <i class="icon i-share"></i>
-                                <ul class="clearfix">
-                                    <li><a class="icon i-sina" href=""></a></li>
-                                    <li><a class="icon i-qzone" href=""></a></li>
-                                    <li><a class="icon i-douban" href=""></a></li>
-                                    <li><a class="icon i-wechat" href=""></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <a class="img-wrap" href=""><img src="{% static article.img.url %}" alt=""></a>
-                    <div class="article-text">
-                        {% autoescape off %}
-                        {{ article.content }}
-                        {% endautoescape %}
-
-                    </div>
+                    {% include 'include/article.html' %}
                     <a class="article-more" href="">
                         <span class="more-icon">+</span>
                         MORE

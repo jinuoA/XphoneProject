@@ -35,7 +35,7 @@
                 {% for Oneplus in Oneplus_list %}
                 <li>
                     <a href="{% url 'product_details' Oneplus.id %}">
-                        <img src="{% static Oneplus.saleImg.url  %}" alt="">
+                        <img src="{% static Oneplus.saleImg.url %}" alt="">
                         <h3>{{ Oneplus.saleDese }}</h3>
                         <p class="price">¥ {{ Oneplus.salePrice }}</p>
                     </a>

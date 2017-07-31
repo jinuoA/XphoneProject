@@ -11,7 +11,8 @@ urlpatterns = [
     url(r'^blog_video/$',blog_video,name='blog_video'),
     url(r'^blog_news/$',blog_news,name='blog_news'),
     url(r'^blog_picture/$',blog_picture,name='blog_picture'),
-    # url(r'^video/$',video,name='video'),
+    url(r'^video/(?P<id>\d+)/$',video,name='video'),
+    url(r'^article_details/(?P<id>\d+)/$',article_details,name='article_details'),
     url(r'^qiniu_video/$', qiniu_video, name='qiniu_video'),
     url(r'^uptoken/$', uptoken, name='uptoken'),
 

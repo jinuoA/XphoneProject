@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="{% static 'scss/blog/blog-home&news.css' %}">
     <link href="{% static 'scss/star-phone/star-phone.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'scss/product-details/products-dails.css' %}">
+    <!--blog details-->
+    <link rel="stylesheet" href="{% static 'scss/blog/article-details.css' %}">
 
 
 </head>
@@ -53,11 +55,23 @@
             </div>
             {% if request.user.is_authenticated %}
             <div class="user" style="">
-                <a href="/logout"><span></span></a>
+                <a href="{% url 'logout' %}"><span></span></a>
+                <span class="j-loginin"></span>
+                <ul class="logout">
+                    <li>我的订单</li>
+                    <li>super账户</li>
+                    <li>退出</li>
+                </ul>
             </div>
             {% else %}
             <div class="user">
-                <a href="/login"><span></span></a>
+                <a href="{% url 'login' %}"><span></span></a>
+            <span class="j-loginin"></span>
+                <ul class="logout">
+                    <li>我的订单</li>
+                    <li>super账户</li>
+                    <li>退出</li>
+                </ul>
             </div>
             {% endif %}
 
@@ -78,7 +92,7 @@
                 </div>
                 <div class="bottom">
                     <ul>
-                        <li><a href="{% url 'OnePlus5' %}">oneplus5</a></li>
+                        <li><a href="star-phone.htmml">oneplus5</a></li>
                         <li><a href="#">super快闪充电器</a></li>
                         <li><a href="#">oneplus 5保护壳</a></li>
                         <li><a href="#">电子发票</a></li>
@@ -169,15 +183,29 @@
     <div class="list-msg">
         <ul class="top">
             <li>
-                {% for ab in about_list %}
                 <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
                 <div class="less528-footer-content">
-
+                    {% for ab in about_list %}
                     <p><a href="#">{{ ab.name }}</a></p>
-
+                    {% endfor %}
                 </div>
             </li>
-            {% endfor %}
+            <li>
+                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
+                <div class="less528-footer-content">
+                    <p><a href="#">oneplus5</a></p>
+                    <p><a href="#">superphone 3T</a></p>
+                    <p><a href="#">superphone3</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="less528-footer-title"><span>super产品</span><span class="fr superfont icon-unfold color2"></span></div>
+                <div class="less528-footer-content">
+                    <p><a href="#">oneplus5</a></p>
+                    <p><a href="#">superphone 3T</a></p>
+                    <p><a href="#">superphone3</a></p>
+                </div>
+            </li>
         </ul>
         <div class="bottom">
             <div class="box">

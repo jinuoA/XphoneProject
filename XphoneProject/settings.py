@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'XphoneProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Xphone',
+        'NAME': 'Xphone3',
         'USER': 'root',
         'PASSWORD':'d14011b',
-        'POST':'',
+        'HOST':'',
         'POST':'',
     }
 }
@@ -126,14 +126,17 @@ MEDIA_URL = '/uploads/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'uploads')
 
+# 用户自定义model
+AUTH_USER_MODEL = 'phone_auth.User'
+
 
 # 邮件配置
 EMAIL_HOST = 'smtp.qq.com'
-EMAIL_HOST_USER = '1668488211@qq.com'
-EMAIL_HOST_PASSWORD = 'reveqrhbrisdbjjb'
+EMAIL_HOST_USER = '1107194939@qq.com'
+EMAIL_HOST_PASSWORD = 'd14011b'
 EMAIL_PORT = '465'
 EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = '2xphoneTeam <1668488211@qq.com>'
+DEFAULT_FROM_EMAIL = '2xphoneTeam <1107194939@qq.com>'
 
 
 

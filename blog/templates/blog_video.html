@@ -13,25 +13,23 @@
 <div class="tab-page">
     <div class="page-container">
         <ul class="video-inner">
-            <li class="video-big"><a href="">
-{#                <img src="{% static 'images/blog/5big(1).jpg' %}" alt="">#}
-                    <video width="320" height="240" controls>
-                    <source src="{% static 'images/womendeweilai.mp4' %}" type="video/mp4"></video>
+            {% for vid in video_list %}
+                {% if vid.id < 2 %}
+            <li class="video-big"><a href="{% url 'video' vid.id %}">
+
+                <img src="{% static vid.img_url.url %}" alt="">
+
                 <p class="video-desc">Star-Phone 发布会</p></a></li>
+                {% endif %}
+        {% endfor %}
             <li class="video-small">
                 <ul>
-                    <li><a href=""><img src="{% static 'images/blog/5product.jpg' %}" alt="">
+                    {% for vid in video_list %}
+                        {% if vid.id > 2 %}
+                    <li><a href="{% url 'video' vid.id%}"><img src="{% static vid.img_url.url %}" alt="">
                         <p class="video-desc">Star-Phone 产品视频</p></a></li>
-                    <li><a href=""><img src="{% static 'images/blog/5product.jpg' %}" alt="">
-                        <p class="video-desc">Star-Phone 产品视频</p></a></li>
-                    <li><a href=""><img src="{% static 'images/blog/5product.jpg' %}" alt="">
-                        <p class="video-desc">Star-Phone 产品视频</p></a></li>
-                    <li><a href=""><img src="{% static 'images/blog/5product.jpg' %}" alt="">
-                        <p class="video-desc">Star-Phone 产品视频</p></a></li>
-                    <li><a href=""><img src="{% static 'images/blog/5product.jpg' %}" alt="">
-                        <p class="video-desc">Star-Phone 产品视频</p></a></li>
-                    <li><a href=""><img src="{% static 'images/blog/5product.jpg' %}" alt="">
-                        <p class="video-desc">Star-Phone 产品视频</p></a></li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </li>
         </ul>

@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from django.shortcuts import render
+from django.shortcuts import render,Http404
 from xphone.models import *
 from blog.models import *
 import logging
@@ -46,19 +46,20 @@ def blog(request):
 
 def blog_video(request):
     try:
-        video_list = Video.objects.all()
+        video_list = Video.objects.order_by()
     except Exception as e:
         logger.error(e)
 
     return render(request,'blog_video.html',locals())
 
 
-def video(request):
+def video(request,id):
     try:
-        pass
+        video_list = Video.objects.filter(id=id)
+
     except:
         pass
-    return render(request,'index_1.html',locals())
+    return render(request,'demo.html',locals())
 
 
 def blog_picture(request):
@@ -79,6 +80,19 @@ def blog_news(request):
         logger.error(e)
 
     return render(request,'blog_news.html',locals())
+
+
+def article_details(request,id):
+    try:
+        id = request.GET.get('id',None)
+        try:
+            article = Article.objects.get(id=id)
+        except Article.DoesNotExist:
+            return HttpResponse("页面不存在")
+    except Exception as e:
+        pass
+    return render(request,'article_details.html',locals())
+
 
 #qiniu
 def qiniu_video(request):

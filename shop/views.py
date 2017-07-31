@@ -58,5 +58,4 @@ def product_details(request,id):
 
     except Exception as e:
         pass
-    return render(request,'product_details.html',locals())
-
+    return render(request, 'product_details.html', locals())

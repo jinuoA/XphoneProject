@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from django import forms
-from xphone.models import *
+from phone_auth.models import *
 
 class LoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': u'用户名', 'required': 'required'}),
@@ -26,7 +26,7 @@ class RegForm(forms.Form):
         password = cleaned_data["password"]
         password2 = cleaned_data["password2"]
         user = cleaned_data["username"]
-        if UserInfo.objects.filter(username=user).all():
+        if User.objects.filter(username=user).all():
             raise forms.ValidationError(u'该用户名已存在！')
         print password, password2
         if password != password2:
