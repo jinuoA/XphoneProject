@@ -84,7 +84,7 @@ def blog_news(request):
 
 def article_details(request,id):
     try:
-        id = request.GET.get('id',None)
+        article_list = Article.objects.all()[0:4]
         try:
             article = Article.objects.get(id=id)
         except Article.DoesNotExist:

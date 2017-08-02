@@ -26,7 +26,13 @@
                 {% for article in article_list %}
                 <div class="article-cell clearfix">
                     {% include 'include/article.html' %}
-                    <a class="article-more" href="">
+                    <div class="article-text">
+                        {% autoescape off %}
+                        {{ article.desc }}
+                        {% endautoescape %}
+
+                    </div>
+                    <a class="article-more" href="{% url 'article_details' article.id %}">
                         <span class="more-icon">+</span>
                         MORE
                     </a>
@@ -35,21 +41,7 @@
             </div>
             {% include 'include/pagination.html' %}
         </div>
-        <!--recommendation-->
-        <div class="recommendation">
-            <h3>热点推荐</h3>
-            <ul class="recommendation-inner">
-                {% for art in article_list %}
-                <li>
-                    <a class="clearfix" href="">
-                        <img src="{% static art.img.url %}" alt="">
-                        <span class="recommendation-desc">
-                            <span class="recommendation-desc-text">{{ art.desc }}</span></span>
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+        {% include 'include/recommendation.html' %}
     </div>
 </div>
 {% endblock %}

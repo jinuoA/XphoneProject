@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!--recommendation-->
+        <div class="recommendation">
+            <h3>热点推荐</h3>
+            <ul class="recommendation-inner">
+                {% for art in article_list %}
+                <li>
+                    <a class="clearfix" href="{% url 'article_details' art.id %}">
+                        <img src="{% static art.img.url %}" alt="">
+                        <span class="recommendation-desc">
+                            <span class="recommendation-desc-text">{{ art.desc|slice:":30" }}</span></span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>

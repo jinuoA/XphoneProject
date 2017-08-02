@@ -87,7 +87,9 @@
     </section>
     <!--section video-->
     <section class="sp-video">
-        <a class="sp-video-btn" href=""></a>
+        {% for v in video_list %}
+        <a class="sp-video-btn" href="{% url 'video' v.id %}"></a>
+        {% endfor %}
     </section>
     <!--section camera-->
     <section class="sp-camera">

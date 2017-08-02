@@ -44,15 +44,15 @@ def product_details(request,id):
     try:
         sale = ShopSales.objects.all()
 
-
         try:
-
+            product = Product_details.objects.filter(sale_id=id)[0:1]
+            product_list = Product_details.objects.filter(sale_id=id)
+            #选择颜色
+            # pro_color = Product_details.objects.get(color_img__exact=False)
             arg_list = Arg.objects.filter(sale_id=id)
             pro_list = Product_desc.objects.filter(sale_id=id)[0:1]
             pro_list1 = Product_desc.objects.filter(sale_id=id)[1:2]
             prob_list = Prob.objects.all()
-
-
         except Product_details.DoesNotExist:
             raise Http404
 

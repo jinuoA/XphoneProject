@@ -27,29 +27,13 @@
                 <!--article cell for details-->
                 <div class="article-cell">
                     {% include 'include/article.html' %}
-{#                    <!--article title-->#}
-{#                    <div class="article-title"><a href="">为什么 OnePlus 5 的灰色，要比以往更深一些？</a></div>#}
-{#                    <!--article author and share-->#}
-{#                    <div class="article-source">#}
-{#                        <span class="article-origin">#}
-{#                            <span class="article-year">2017.07.03<span class="article-time">20:30</span></span>#}
-{#                            <span class="article-author">By: OnePlus博客</span>#}
-{#                        </span>#}
-{#                        <ul class="article-share clearfix">#}
-{#                            <li><a href="">#}
-{#                                <i class="icon i-like"></i>#}
-{#                                <span class="like-count">2</span>#}
-{#                            </a></li>#}
-{#                            <li><a href="">#}
-{#                                <i class="icon i-praise"></i>#}
-{#                                <span class="praise-count">15505</span>#}
-{#                            </a></li>#}
-{#                        </ul>#}
-{#                    </div>#}
-{#                    <a class="img-wrap" href=""><img src="{% static 'images/blog/720.jpg' %}" alt=""></a>#}
-{#                    <div class="article-text">#}
-{#                        如果说黑色是亘古不变不怒自威的色彩教父，那么灰色似乎则是更加懂得拿捏中庸之道的谦谦君子。当它们和周边的事物在一起时，黑色的出场绝对自带主角光环，一举一动间彰显舍我其谁的风范；而灰色则在众生之中显得更为谦逊，淡妆浓抹总相宜。#}
-{#                    </div>#}
+                    <div class="#">
+                        {% autoescape off %}
+                        {{ article.content }}
+                        {% endautoescape %}
+
+                    </div>
+
                     <ul class="details-share clearfix">
                         <li><a class="share-sina" href="javascript:void(0);"></a></li>
                         <li><a class="share-qzone" href="javascript:void(0);"></a></li>
@@ -210,32 +194,7 @@
             </div>
         </div>
         <!--recommendation-->
-        <div class="recommendation">
-            <h3>热点推荐</h3>
-            <ul class="recommendation-inner">
-                <li>
-                    <a class="clearfix" href="">
-                        <img src="{% static 'images/blog/90.jpg' %}" alt="">
-                        <span class="recommendation-desc">
-                            <span class="recommendation-desc-text">为什么 OnePlus 5 的灰色，要比以往更深一些？</span></span>
-                    </a>
-                </li>
-                <li>
-                    <a class="clearfix" href="">
-                        <img src="{% static 'images/blog/90.jpg' %}" alt="">
-                        <span class="recommendation-desc">
-                            <span class="recommendation-desc-text">为什么 OnePlus 5 的灰色，要比以往更深一些？</span></span>
-                    </a>
-                </li>
-                <li>
-                    <a class="clearfix" href="">
-                        <img src="{% static 'images/blog/90.jpg' %}" alt="">
-                        <span class="recommendation-desc">
-                            <span class="recommendation-desc-text">为什么 OnePlus 5 的灰色，要比以往更深一些？</span></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    {% include 'include/recommendation.html' %}
     </div>
 </div>
 {% endblock %}

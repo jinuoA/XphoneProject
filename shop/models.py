@@ -1,51 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.db import models
 
-# Create your models here.
-
-
-# # 商品种类
-#
-# class ProductSort(models.Model):
-#     sortName = models.CharField(max_length=10)
-#     sortPic = models.ImageField(upload_to='uploads')
-#
-#
-#     class Meta():
-#         verbose_name = '商品'
-#         verbose_name_plural = verbose_name
-#
-#     def __str__(self):
-#         return self.sortName.encode('utf-8')
-#
-#
-# #　商品表
-#
-# class Product(models.Model):
-#     ProductName = models.CharField(max_length=30)
-#     ProductDesc = models.CharField(max_length=80)
-#     ProductPrice = models.DecimalField(max_digits=7,decimal_places=2)
-#     ProductImg = models.ImageField(upload_to='uploads/')
-#     saleCount = models.IntegerField(default=0)
-#     ProductSort = models.ForeignKey('ProductSort')
-#     pubdate = models.DateTimeField()
-#     ProductColor = models.CharField(max_length=20)
-#     extra = models.CharField(max_length=20,null=True,blank=True)
-#
-#
-#     class Meta():
-#         verbose_name = '商品详情'
-#         verbose_name_plural = verbose_name
-#
-#     def __str__(self):
-#         return self.ProductName.encode('utf-8')
-
-
-
-
-
-
-
 # 导航标签
 
 class Navtags(models.Model):
@@ -115,28 +70,31 @@ class ShopSales(models.Model):
 
 class Product_details(models.Model):
     name = models.CharField(max_length=30,)
+    color = models.CharField(max_length=16,blank=True)
     title = models.CharField(max_length=30,verbose_name="标题")
-    desc = models.CharField(max_length=200,verbose_name="描述")
+    desc = models.CharField(max_length=200,verbose_name="描述",blank=True)
     price = models.DecimalField(max_digits=5,decimal_places=2,verbose_name="商品价格")
     img_url = models.ImageField(upload_to='shop/product/%Y/%m')
+    small_img = models.ImageField(upload_to='shop/product/%Y/%m',blank=True,null=True)
+    color_img = models.ImageField(upload_to='shop/product/%Y/%m',blank=True,null=True)
     sale = models.ForeignKey(ShopSales,default=1)
 
 
-class Meta():
-    verbose_name = '商品展示'
-    verbose_name_plural = verbose_name
+    class Meta():
+        verbose_name = '商品展示'
+        verbose_name_plural = verbose_name
 
 
-def __unicode__(self):
-    return self.title
+    def __unicode__(self):
+        return self.title
 
 
 #商品详情
 
 class Product_desc(models.Model):
     img_url = models.ImageField(upload_to='shop/product_desc/%Y/%m')
-    title = models.CharField(max_length=30)
-    desc = models.CharField(max_length=100)
+    title = models.CharField(max_length=30,blank=True)
+    desc = models.CharField(max_length=100,blank=True)
     sale = models.ForeignKey(ShopSales,default=1)
     index = models.IntegerField(default=999, verbose_name="排序")
 

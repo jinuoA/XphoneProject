@@ -112,3 +112,16 @@ class Server(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+#　搜索内容
+
+class Search(models.Model):
+    name = models.CharField(max_length=50)
+
+    class Meta():
+        verbose_name = "搜索内容"
+        verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return self.name

@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.db import models
-
+from blog.models import Video
 # Create your models here.
 
 # #　用户表(未完还需扩展)
@@ -380,6 +380,7 @@ class Oneplus5(models.Model):
     title = models.CharField(max_length=30)
     title_desc = models.CharField(max_length=200)
     img_url = models.ImageField(upload_to='uploads/')
+    video = models.ForeignKey(Video)
 
 
     class Meta():

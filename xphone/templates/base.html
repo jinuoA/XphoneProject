@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
     {% for nav in nav_list %}
         <title>{{ nav }}</title>
     {% endfor %}
@@ -113,13 +114,7 @@
 <!--头部导航栏 结束-->
 <!--小屏幕下隐藏的部分 开始-->
 <div class="less768-menu dn">
-    <ul id="less768-ul">
-        <li><a href="star-phone.html">oneplus5</a></li>
-        <li><a href="/shop/templates/store.html">商城</a></li>
-        <li><a href="/server/templates/service.html">服务</a></li>
-        <li><a href="/blog/templates/bolg.html">博客</a></li>
-        <li><a href="#">论坛</a></li>
-    </ul>
+   {% include 'include/s' %}
     <div class="arrow-down" id="less768-header-arrow-down">
         <i class="superfont icon-packup"></i>
     </div>
@@ -233,4 +228,5 @@
 </body>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/headercontral.js' %}"></script>
+<script src="{% static 'js/product-dails.js' %}"></script>
 </html>

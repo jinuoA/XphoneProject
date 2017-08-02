@@ -25,7 +25,7 @@
             <li class="video-small">
                 <ul>
                     {% for vid in video_list %}
-                        {% if vid.id > 2 %}
+                        {% if  vid.id > 2 %}
                     <li><a href="{% url 'video' vid.id%}"><img src="{% static vid.img_url.url %}" alt="">
                         <p class="video-desc">Star-Phone 产品视频</p></a></li>
                         {% endif %}

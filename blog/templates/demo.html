@@ -9,15 +9,15 @@
 <script src="{% static 'js2/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'js2/jwplayer.js' %}"></script>
 <script type="text/javascript" src="{% static 'js2/jquery.fancybox.js' %}"></script>
-{% for vid in video_list %}
-
-<embed src='{{ vid.video_url }}' allowFullScreen='true' quality='high' width='1000' height='500' align='middle'
-       allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
-{% endfor %}
+{#{% for vid in video_list %}#}
+{##}
+{#<embed src='{{ vid.video_url }}' allowFullScreen='true' quality='high' width='1000' height='500' align='middle'#}
+{#       allowScriptAccess='always' type='application/x-shockwave-flash'></embed>#}
+{#{% endfor %}#}
 <style type="text/css">
  a {outline: 0 none; text-decoration: none;}
  a img {border: 0 none;}
- #wrap { width: 800px;  margin: 20px auto; font-family: arial, sans-serif; font-size: 14px;}
+ #wrap { width: 800px;  margin: 200px auto; font-family: arial, sans-serif; font-size: 14px;}
 </style>
 <script>
 /* <![CDATA[ */
@@ -40,6 +40,13 @@ $(document).ready(function () {
 <div id="wrap">
  
 {# <a class="fancybox" href="{% static 'images/womendeweilai.mp4' %}" data-width="640" data-height="360"><img src="{% static 'images/seperator.png' %}" width="380" height="254"></a>#}
+ <a class="fancybox">
+     {% for vid in video_list %}
+
+<embed src='{{ vid.video_url }}' allowFullScreen='true' quality='high' width='800' height='500' align='middle'
+       allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+{% endfor %}
+ </a>
 
 </div><!--wrap-->
 </body> 
